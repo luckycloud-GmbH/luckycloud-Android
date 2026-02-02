@@ -1,4 +1,4 @@
-# luckycloud Android Client
+# luckycloud Android App
 
 Android app for accessing and managing files in luckycloud.
 
