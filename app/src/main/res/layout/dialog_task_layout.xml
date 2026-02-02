@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dip"
+    android:layout_marginStart="8dip"
+    android:orientation="vertical"
+    android:background="@drawable/msg_background">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:textSize="@dimen/dialog_msg_title_txt_size"
+        android:textColor="@color/luckycloud_green"
+        android:textAlignment="center"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/customPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            style="@style/loading"
+            android:id="@+id/loading"
+            android:layout_width="@dimen/dialog_progress_logo_width"
+            android:layout_height="@dimen/dialog_progress_logo_width"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:id="@+id/loading_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_largest"
+            android:max="100"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/error_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_largest"
+            android:textColor="@color/red"
+            android:textSize="@dimen/dialog_error_txt_size"
+            android:gravity="center"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/double_card_layout"
+        layout="@layout/dialog_button_double"/>
+
+    <include
+        android:id="@+id/single_card_layout"
+        layout="@layout/dialog_button_single"
+        android:visibility="gone"/>
+</LinearLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bottom_bar_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <include
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                layout="@layout/search_text" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/setting_card"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="20dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/direction_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_below"
+                    app:tint="@color/luckycloud_green" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/luckycloud_green"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="20dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/white" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/listContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/action_mode_layout"
+                    layout="@layout/toolbar_actionmode"
+                    android:visibility="gone"/>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swiperefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="@dimen/margin_big">
+
+                    <com.seafile.seadroid2.ui.FastRecyclerView
+                        android:id="@+id/recycler_view"
+                        style="@style/Widget.FastRecyclerView.Style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numColumns="1" />
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/empty"
+                android:layout_width="@dimen/empty_folder_width"
+                android:layout_height="@dimen/empty_folder_height"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/ic_empty_icon"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/no_repos_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/margin_large"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/empty_folder_width"
+                    android:layout_height="@dimen/empty_folder_height"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/ic_no_items_tip"
+                    app:tint="@color/text_view_color"/>
+
+                <TextView
+                    android:id="@+id/no_repos_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:gravity="center"
+                    android:textSize="@dimen/subtopic_txt_size" />
+
+                <TextView
+                    android:id="@+id/no_repos_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/title_txt_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/collapse_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/dialog_msg_background"
+                android:orientation="vertical">
+
+                <include layout="@layout/search_setting" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@style/loading"
+            android:layout_width="@dimen/normal_progress_logo_width"
+            android:layout_height="@dimen/normal_progress_logo_width" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dip"
+            android:singleLine="true"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/popup_select_datetime2_layout"
+        layout="@layout/popup_select_datetime2"
+        android:visibility="invisible"/>
+
+    <include
+        android:id="@+id/popup_select_unit_layout"
+        layout="@layout/popup_select_unit"
+        android:visibility="invisible"/>
+</FrameLayout>

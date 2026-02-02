@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/msg_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/link"
+                android:textSize="@dimen/topic_txt_size"
+                android:textColor="@color/luckycloud_green"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/edit_description_link"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dialog_msg_txt_height"
+                android:paddingHorizontal="@dimen/dialog_msg_txt_padding"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@drawable/rounded_edittext_dialog"
+                android:hint="@string/description"
+                android:textColor="@color/text_view_color"
+                android:textColorHint="@color/dialog_msg_txt_hint"
+                android:textSize="@dimen/title_txt_size"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edit_link"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dialog_msg_txt_height"
+                android:paddingHorizontal="@dimen/dialog_msg_txt_padding"
+                android:background="@drawable/rounded_edittext_dialog"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:hint="@string/link"
+                android:text="http://"
+                android:textColor="@color/text_view_color"
+                android:textColorHint="@color/dialog_msg_txt_hint"
+                android:textSize="@dimen/title_txt_size"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/double_card_layout"
+            layout="@layout/dialog_button_double" />
+    </LinearLayout>
+</RelativeLayout>

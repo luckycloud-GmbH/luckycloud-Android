@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--new-->
+    <color name="gesture_background">@color/lucky_black</color>
+    <color name="gesture_foreground">@color/luckycloud_green</color>
+    <color name="bottom_bar_background">@color/lucky_black</color>
+    <color name="window_background">@color/lucky_black</color>
+    <color name="token_input_stroke">@color/border_dark</color>
+    <color name="token_input_solid">@color/lucky_black2</color>
+    <color name="text_view_color">@color/field</color>
+    <color name="text_view_secondary_color">@color/dots_type_grey</color>
+    <color name="account_edit_text_background">@color/lucky_black2</color>
+    <color name="account_edit_text_foreground">@color/white</color>
+    <color name="dialog_msg_background">@color/lucky_black2</color>
+    <color name="dialog_msg_txt_hint">@color/dots_type_grey</color>
+    <color name="settings_info_text">@color/lucky_black2</color>
+    <color name="list_divider">@color/lucky_black2</color>
+    <color name="cuc_button_background">@color/lucky_black2</color>
+    <color name="search_background">@color/lucky_black2</color>
+    <color name="search_foreground">@color/white</color>
+    <color name="settings_divider">@color/line20</color>
+    <color name="dots_type_grey_with_opacity">@color/dots_type_grey_15</color>
+    <color name="background_light_with_opacity">@color/background_light_15</color>
+    <color name="popup_background">@color/lucky_black</color>
+    <color name="dialog_button_border">@color/border_light2</color>
+    <color name="repo_item_select_color">@color/dots_type_grey_35</color>
+    <color name="action_mode_background">@color/lucky_black2</color>
+</resources>

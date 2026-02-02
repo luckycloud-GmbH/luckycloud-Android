@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/color_card"
+    android:layout_width="16dp"
+    android:layout_height="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/red"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <ImageView
+        android:id="@+id/color_check_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:src="@drawable/ic_check"
+        app:tint="@color/white" />
+</androidx.cardview.widget.CardView>

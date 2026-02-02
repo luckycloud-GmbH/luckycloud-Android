@@ -1,0 +1,23 @@
+name: Clone Seadroid
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  clone:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code (Dev)
+        uses: actions/checkout@v2
+        with:
+          path: dev
+          ref: live-seadroid
+
+      - name: Checkout code (Live)
+        uses: actions/checkout@v2
+        with:
+          path: live
+          repository: haiwen/seadroid
+          ref: master

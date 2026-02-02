@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/parentPanel"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginEnd="8dip"
+	android:layout_marginStart="8dip"
+	android:orientation="vertical"
+	android:background="@drawable/msg_background">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/title_text"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/margin_large"
+			android:text="@string/detect_text"
+			android:textSize="@dimen/dialog_msg_title_txt_size"
+			android:textColor="@color/luckycloud_green"
+			android:textAlignment="center"
+			android:visibility="visible"/>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/task_dialog_inner_padding">
+
+			<TextView
+				android:id="@+id/use_ocr_text"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="@dimen/task_dialog_content_margin_horizontal"
+				android:text="@string/will_use_ocr"
+				android:textAlignment="center"
+				android:lineSpacingExtra="@dimen/task_dialog_content_line_spacing"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/task_dialog_inner_padding">
+
+			<TextView
+				android:id="@+id/ocr_settings_text"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="@dimen/task_dialog_content_margin_horizontal"
+				android:text="@string/ocr_settings"
+				android:textSize="@dimen/lv_download_state_txt_size"
+				android:textAlignment="center"
+				android:lineSpacingExtra="@dimen/task_dialog_content_line_spacing"/>
+		</LinearLayout>
+
+		<androidx.cardview.widget.CardView
+			android:id="@+id/execute_ocr_card"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/share_edit_text_height"
+			android:layout_marginTop="@dimen/margin_normal"
+			android:layout_marginBottom="@dimen/margin_large"
+			android:layout_gravity="center"
+			android:clickable="true"
+			android:focusable="true"
+			android:foreground="?android:attr/selectableItemBackground"
+			app:cardBackgroundColor="@color/dots_type_grey_with_opacity"
+			app:cardCornerRadius="@dimen/share_edit_text_radius"
+			app:cardElevation="0dp">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal"
+				android:gravity="end|center_vertical">
+
+				<TextView
+					android:id="@+id/execute_ocr_summary"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/share_edit_text_height"
+					android:layout_marginLeft="@dimen/margin_big"
+					android:gravity="center"
+					android:text="@string/ask_everytime"
+					android:textColor="@color/white"
+					android:textSize="@dimen/subtitle_txt_size" />
+
+				<ImageView
+					android:layout_width="12dp"
+					android:layout_height="12dp"
+					android:layout_marginLeft="@dimen/margin_small"
+					android:layout_marginRight="@dimen/margin_big"
+					android:src="@drawable/ic_down"
+					app:tint="@color/white" />
+			</LinearLayout>
+		</androidx.cardview.widget.CardView>
+
+		<include
+			android:id="@+id/double_card_layout"
+			layout="@layout/dialog_button_double"/>
+	</LinearLayout>
+
+	<include
+		android:id="@+id/popup_select_execute_ocr_layout"
+		layout="@layout/popup_select_execute_ocr"
+		android:visibility="invisible"/>
+</RelativeLayout>

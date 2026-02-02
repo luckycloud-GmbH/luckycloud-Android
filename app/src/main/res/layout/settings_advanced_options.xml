@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:paddingVertical="@dimen/margin_normal"
+        android:paddingHorizontal="@dimen/dialog_op_file_item_padding_horizontal"
+        android:background="@drawable/msg_background"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/advanced_options_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/settings_icon_width"
+                android:layout_height="@dimen/settings_icon_width"
+                android:layout_marginRight="@dimen/settings_icon_margin_left"
+                android:src="@drawable/ic_bottom_bar_settings"
+                app:tint="@color/luckycloud_green" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/advanced_options"
+                android:textSize="@dimen/topic_txt_size"/>
+
+            <ImageView
+                android:id="@+id/advanced_options_direction_image"
+                android:layout_width="@dimen/settings_direction_width"
+                android:layout_height="@dimen/settings_direction_width"
+                android:src="@drawable/ic_left"
+                app:tint="@color/luckycloud_green" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/advanced_options_collapse_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/settings_upload_log_key_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/dialog_msg_background"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_upload_log"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+
+                    <TextView
+                        android:id="@+id/settings_download_data_location_key_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_upload_log_desc"
+                        android:textSize="@dimen/subtitle_txt_size"
+                        android:textColor="@color/text_view_secondary_color"
+                        android:fontFamily="@font/euclidsquare_regular"
+                        android:lines="1"
+                        android:singleLine="true"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/settings_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="@dimen/padding_normal"
+                    android:text="@string/execute_ocr"
+                    android:fontFamily="@font/euclidsquare_regular"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/execute_ocr_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/share_edit_text_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/dots_type_grey_with_opacity"
+                    app:cardCornerRadius="@dimen/share_edit_text_radius"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="end|center_vertical">
+
+                        <TextView
+                            android:id="@+id/execute_ocr_summary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/share_edit_text_height"
+                            android:layout_marginLeft="@dimen/margin_big"
+                            android:gravity="center"
+                            android:text="@string/ask_everytime"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/subtitle_txt_size" />
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin_big"
+                            android:src="@drawable/ic_down"
+                            app:tint="@color/white" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/settings_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="@dimen/padding_normal"
+                    android:text="@string/open_office_with"
+                    android:fontFamily="@font/euclidsquare_regular"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/open_office_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/share_edit_text_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/dots_type_grey_with_opacity"
+                    app:cardCornerRadius="@dimen/share_edit_text_radius"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="end|center_vertical">
+
+                        <TextView
+                            android:id="@+id/open_office_summary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/share_edit_text_height"
+                            android:layout_marginLeft="@dimen/margin_big"
+                            android:gravity="center"
+                            android:text="@string/optional"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/subtitle_txt_size" />
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin_big"
+                            android:src="@drawable/ic_down"
+                            app:tint="@color/white" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/settings_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="@dimen/padding_normal"
+                    android:text="@string/open_pdf_with"
+                    android:fontFamily="@font/euclidsquare_regular"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/open_pdf_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/share_edit_text_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/dots_type_grey_with_opacity"
+                    app:cardCornerRadius="@dimen/share_edit_text_radius"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="end|center_vertical">
+
+                        <TextView
+                            android:id="@+id/open_pdf_summary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/share_edit_text_height"
+                            android:layout_marginLeft="@dimen/margin_big"
+                            android:gravity="center"
+                            android:text="@string/optional"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/subtitle_txt_size" />
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin_big"
+                            android:src="@drawable/ic_down"
+                            app:tint="@color/white" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

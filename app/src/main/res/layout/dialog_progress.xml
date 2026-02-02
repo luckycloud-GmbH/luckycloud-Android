@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#59292929">
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/close_card"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:clickable="true"
+		android:focusable="true"
+		android:foreground="@android:color/transparent"
+		app:cardBackgroundColor="@android:color/transparent"
+		app:cardCornerRadius="0dp"
+		app:cardElevation="0dp">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_gravity="center"
+			android:gravity="center">
+
+			<ProgressBar
+				style="@style/loading"
+				android:id="@+id/progress_bar"
+				android:layout_width="@dimen/login_progress_logo_width"
+				android:layout_height="@dimen/login_progress_logo_width"/>
+
+			<TextView
+				android:id="@+id/title_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="@dimen/margin_larger"
+				android:textSize="@dimen/subtitle_txt_size"
+				android:textColor="@color/field"
+				android:fontFamily="@font/euclidsquare"
+				android:visibility="gone"/>
+		</LinearLayout>
+	</androidx.cardview.widget.CardView>
+</RelativeLayout>

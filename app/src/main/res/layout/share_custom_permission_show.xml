@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/share_custom_permission_show_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/permission_of_custom"
+        android:textSize="@dimen/title_txt_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_small"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/margin_normal"
+            android:text="@string/name_hint"
+            android:textSize="@dimen/title_txt_size"
+            android:textColor="@color/text_view_secondary_color"
+            android:lines="1"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textSize="@dimen/title_txt_size"
+            android:textColor="@color/text_view_secondary_color"
+            android:lines="1"
+            android:singleLine="true"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bs_ic_more"
+            app:tint="@color/text_view_secondary_color"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_light"/>
+
+    <LinearLayout
+        android:id="@+id/list_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:cacheColorHint="#00000000"
+            android:background="@drawable/msg_background"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="true"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:smoothScrollbar="true"
+            android:divider="@color/settings_divider"
+            android:dividerHeight="1dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/add_permission_card"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/share_edit_text_height"
+            app:cardCornerRadius="@dimen/share_edit_text_radius"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/luckycloud_green"
+            app:cardElevation="0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/share_edit_text_radius"
+                android:layout_gravity="center"
+                android:text="@string/add_permission"
+                android:textColor="@color/white"
+                android:textSize="@dimen/subtitle_txt_size"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

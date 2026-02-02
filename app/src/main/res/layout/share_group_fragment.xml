@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/padding_normal"
+    android:background="@drawable/msg_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/share_item_margin_horizontal"
+        android:layout_marginBottom="@dimen/share_item_margin_bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:text="@string/set_permission"
+            android:textSize="@dimen/subtitle_txt_size" />
+
+        <LinearLayout
+            android:id="@+id/select_group_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/select_group_text"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/share_edit_text_height"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext_share2"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="@font/euclidsquare_medium"
+                android:hint="@string/select_group"
+                android:importantForAutofill="auto"
+                android:inputType="number"
+                android:paddingStart="@dimen/share_edit_text_radius"
+                android:paddingEnd="@dimen/share_edit_text_radius"
+                android:textColor="@color/text_view_secondary_color"
+                android:textSize="@dimen/info_txt_size" />
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="@dimen/share_edit_text_height"
+                android:layout_marginEnd="@dimen/share_edit_minus_margin">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/select_group_card"
+                    android:layout_width="50dp"
+                    android:layout_height="@dimen/share_edit_text_height"
+                    android:layout_marginStart="@dimen/share_edit_minus_margin"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/dots_type_grey_with_opacity"
+                    app:cardCornerRadius="@dimen/share_edit_text_radius"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignTop="@id/sort_by_text"
+                        android:layout_alignBottom="@+id/sort_by_text"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="6dp"
+                        android:src="@drawable/ic_down"
+                        app:tint="@color/white" />
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select_permission_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/select_permission_text"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/share_edit_text_height"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext_share2"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="@font/euclidsquare_medium"
+                android:importantForAutofill="auto"
+                android:inputType="number"
+                android:paddingStart="@dimen/share_edit_text_radius"
+                android:paddingEnd="@dimen/share_edit_text_radius"
+                android:text=""
+                android:textColor="@color/text_view_secondary_color"
+                android:textSize="@dimen/info_txt_size" />
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="@dimen/share_edit_text_height"
+                android:layout_marginEnd="@dimen/share_edit_minus_margin">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/select_permission_card"
+                    android:layout_width="50dp"
+                    android:layout_height="@dimen/share_edit_text_height"
+                    android:layout_marginStart="@dimen/share_edit_minus_margin"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/dots_type_grey_with_opacity"
+                    app:cardCornerRadius="@dimen/share_edit_text_radius"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignTop="@id/sort_by_text"
+                        android:layout_alignBottom="@+id/sort_by_text"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="6dp"
+                        android:src="@drawable/ic_down"
+                        app:tint="@color/white" />
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/submit_card"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/share_edit_text_height"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/luckycloud_green"
+                app:cardCornerRadius="@dimen/share_edit_text_radius"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/share_edit_text_radius"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/info_txt_size" />
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/shared_to"
+            android:textSize="@dimen/subtitle_txt_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/share_type_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:paddingEnd="@dimen/margin_normal"
+                android:singleLine="true"
+                android:text="@string/name_hint"
+                android:textColor="@color/text_view_secondary_color"
+                android:textSize="@dimen/subtitle_txt_size" />
+
+            <TextView
+                android:id="@+id/permission_cation_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:text="@string/permission_of_shared"
+                android:textColor="@color/text_view_secondary_color"
+                android:textSize="@dimen/subtitle_txt_size" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/bs_ic_more"
+                android:visibility="gone"
+                app:tint="@color/text_view_secondary_color" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_weight="1"
+            android:background="@drawable/msg_background"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="true"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@color/transparent"
+            android:smoothScrollbar="true" />
+
+        <LinearLayout
+            android:id="@+id/user_adapter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/margin_normal">
+
+                <CheckBox
+                    android:id="@+id/group_checkbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/rounded_checkbox_share"
+                    android:paddingVertical="@dimen/margin_normal"
+                    android:paddingStart="@dimen/margin_normal"
+                    android:text=""
+                    android:textColor="@color/text_view_color"
+                    android:textSize="@dimen/info_txt_size"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border_light" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/popup_select_group_layout"
+        layout="@layout/popup_select_group"
+        android:visibility="invisible"/>
+</RelativeLayout>

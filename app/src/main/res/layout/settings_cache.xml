@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:paddingVertical="@dimen/margin_normal"
+        android:paddingHorizontal="@dimen/dialog_op_file_item_padding_horizontal"
+        android:background="@drawable/msg_background"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/cache_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/settings_icon_width"
+                android:layout_height="@dimen/settings_icon_width"
+                android:layout_marginRight="@dimen/settings_icon_margin_left"
+                android:src="@drawable/ic_copy"
+                app:tint="@color/luckycloud_green" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cache_and_download"
+                android:textSize="@dimen/topic_txt_size"/>
+
+            <ImageView
+                android:id="@+id/cache_direction_image"
+                android:layout_width="@dimen/settings_direction_width"
+                android:layout_height="@dimen/settings_direction_width"
+                android:src="@drawable/ic_left"
+                app:tint="@color/luckycloud_green" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cache_collapse_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thumb_in_enc_repo"
+                        android:fontFamily="@font/euclidsquare_regular"
+                        android:lineSpacingExtra="@dimen/padding_small"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:text="@string/thumb_in_enc_repo_detail"
+                        android:textSize="@dimen/subtitle_txt_size"
+                        android:lineSpacingExtra="@dimen/padding_small"
+                        android:textColor="@color/text_view_secondary_color"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/thumb_in_enc_repo_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:thumb="@drawable/custom_switch_thumb_selector"
+                    app:track="@drawable/custom_switch_track_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thumbnail_in_enc_repo_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_large"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/settings_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/save_files_in_cache"
+                            android:fontFamily="@font/euclidsquare_regular"
+                            android:lineSpacingExtra="@dimen/padding_small"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/save_files_in_cache_detail"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:lineSpacingExtra="@dimen/padding_small"
+                            android:textColor="@color/text_view_secondary_color"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/save_files_of_thumb_in_cache_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:thumb="@drawable/custom_switch_thumb_selector"
+                        app:track="@drawable/custom_switch_track_selector" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/settings_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/network_mode"
+                        android:layout_marginEnd="@dimen/margin_large"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/thumb_net_mode_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/dots_type_grey_with_opacity"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginHorizontal="@dimen/margin_normal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                android:id="@+id/thumb_net_mode_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/cuc_how_to_upload_second_radio"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/info_txt_size" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/ic_down"
+                                android:layout_marginStart="@dimen/margin_small"
+                                app:tint="@color/white" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/settings_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/status"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+
+                        <TextView
+                            android:id="@+id/thumb_calc_result_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thumbnails_calculating"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:textColor="@color/text_view_secondary_color"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+
+                        <TextView
+                            android:id="@+id/thumb_calc_status_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thumbnails_calculating"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:textColor="@color/text_view_secondary_color"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/thumb_status_refresh_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="10dp"
+                        app:cardCornerRadius="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/transparent"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_replace"
+                            app:tint="@color/dots_type_grey_with_opacity"/>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/settings_divider" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/settings_download_data_location_key_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/dialog_msg_background"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/download_data_location"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+
+                    <TextView
+                        android:id="@+id/settings_download_data_location_key_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/folder_backup_select_repo_hint"
+                        android:textSize="@dimen/subtitle_txt_size"
+                        android:textColor="@color/text_view_secondary_color"
+                        android:fontFamily="@font/euclidsquare_regular"
+                        android:lines="1"
+                        android:singleLine="true"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/settings_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/settings_cache_title"
+                    android:fontFamily="@font/euclidsquare_regular"/>
+
+                <TextView
+                    android:id="@+id/settings_cache_info_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/subtitle_txt_size"
+                    android:textColor="@color/text_view_secondary_color"
+                    android:fontFamily="@font/euclidsquare_regular"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_cache_location_key_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/settings_divider" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/settings_cache_location_key_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/dialog_msg_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_cache_location_title"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+
+                        <TextView
+                            android:id="@+id/settings_cache_location_key_summary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:textColor="@color/text_view_secondary_color"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/settings_divider" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/settings_clear_cache_key_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/dialog_msg_background"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_clear_cache_title"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/settings_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delete_cache_automatic"
+                        android:fontFamily="@font/euclidsquare_regular"
+                        android:lineSpacingExtra="@dimen/padding_small"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/delete_cache_automatic_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:thumb="@drawable/custom_switch_thumb_selector"
+                    app:track="@drawable/custom_switch_track_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cache_maximum_size_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_large"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/settings_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/set_maximum_size_for_cache"
+                        android:layout_marginEnd="@dimen/margin_large"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cache_maximum_size_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/dots_type_grey_with_opacity"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginHorizontal="@dimen/margin_normal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                android:id="@+id/cache_maximum_size_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="1GB"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/info_txt_size" />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/ic_down"
+                                android:layout_marginStart="@dimen/margin_small"
+                                app:tint="@color/white" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

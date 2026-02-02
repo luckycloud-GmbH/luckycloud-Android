@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:paddingVertical="@dimen/margin_normal"
+        android:paddingHorizontal="@dimen/dialog_op_file_item_padding_horizontal"
+        android:background="@drawable/msg_background"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/about_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/settings_icon_width"
+                android:layout_height="@dimen/settings_icon_width"
+                android:layout_marginRight="@dimen/settings_icon_margin_left"
+                android:src="@drawable/ic_group"
+                app:tint="@color/luckycloud_green" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/about"
+                android:textSize="@dimen/topic_txt_size"/>
+
+            <ImageView
+                android:id="@+id/about_direction_image"
+                android:layout_width="@dimen/settings_direction_width"
+                android:layout_height="@dimen/settings_direction_width"
+                android:src="@drawable/ic_left"
+                app:tint="@color/luckycloud_green" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/about_collapse_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/settings_privacy_policy_key_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/dialog_msg_background"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_privacy_policy_title"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/settings_privacy_policy_key_border"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/settings_divider" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/settings_about_author_key_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/dialog_msg_background"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dialog_op_file_item_padding_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_about_author_title"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_big"
+                android:src="@drawable/ic_luckycloud_wortbildmarke_horizontal"
+                app:tint="@color/luckycloud_green" />
+
+            <TextView
+                android:id="@+id/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dialog_op_file_item_padding_vertical"
+                android:layout_gravity="center"
+                android:textColor="@color/text_view_secondary_color"
+                android:textSize="@dimen/subtitle_txt_size"
+                android:fontFamily="@font/euclidsquare_regular"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

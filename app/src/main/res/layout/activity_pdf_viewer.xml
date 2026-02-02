@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bhuvaneshw.pdf.ui.PdfViewerContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.seafile.seadroid2.pdfviewer.ExtendedToolBar
+        android:id="@+id/pdf_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentColor="@color/luckycloud_green"
+        app:popupBackgroundColor="@color/dialog_msg_background"
+        app:showEditor="true" />
+
+    <com.bhuvaneshw.pdf.PdfViewer
+        android:id="@+id/pdf_viewer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_background"
+        app:containerBackgroundColor="@android:color/transparent" />
+
+    <com.bhuvaneshw.pdf.ui.PdfScrollBar
+        android:id="@+id/pdf_scroll_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:contentColor="@color/text_view_color"
+        app:handleColor="@color/dots_type_grey"
+        app:useVerticalScrollBarForHorizontalMode="false" />
+
+    <LinearLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pdf_tool_bar"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@style/loading"
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/normal_progress_logo_width"
+            android:layout_height="@dimen/normal_progress_logo_width"
+            android:indeterminate="true" />
+
+    </LinearLayout>
+
+</com.bhuvaneshw.pdf.ui.PdfViewerContainer>

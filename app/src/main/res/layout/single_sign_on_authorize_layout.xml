@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_actionbar" /> <!-- placeholder, empty except on L -->
+
+    <LinearLayout
+        android:id="@+id/single_sign_on_loading_ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ProgressBar
+            style="@style/loading"
+            android:layout_width="@dimen/normal_progress_logo_width"
+            android:layout_height="@dimen/normal_progress_logo_width"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/shib_loading"
+            android:paddingTop="4dip"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/single_sign_on_authorize_wv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+    </WebView>
+</LinearLayout>

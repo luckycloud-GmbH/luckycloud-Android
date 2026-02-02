@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28.16dp"
+    android:height="26.957dp"
+    android:viewportWidth="28.16"
+    android:viewportHeight="26.957">
+  <path
+      android:pathData="M18.589,14.377L1.15,14.377a0.9,0.9 0,0 1,0 -1.8L18.589,12.577a0.9,0.9 0,0 1,0 1.8ZM18.589,14.377"
+      android:strokeWidth="0.5"
+      android:fillColor="@color/luckycloud_green"
+      android:strokeColor="@color/luckycloud_green"/>
+  <path
+      android:pathData="M13.778,19.19a0.9,0.9 0,0 1,-0.638 -1.54l4.173,-4.173 -4.173,-4.173a0.9,0.9 0,0 1,1.276 -1.276l4.81,4.81a0.9,0.9 0,0 1,0 1.276l-4.81,4.81A0.9,0.9 0,0 1,13.778 19.19ZM13.778,19.19"
+      android:strokeWidth="0.5"
+      android:fillColor="@color/luckycloud_green"
+      android:strokeColor="@color/luckycloud_green"/>
+  <path
+      android:pathData="M14.681,26.707A13.16,13.16 0,0 1,2.369 18.318a0.9,0.9 0,1 1,1.679 -0.659,11.425 11.425,0 1,0 0,-8.361 0.9,0.9 0,1 1,-1.679 -0.659A13.229,13.229 0,1 1,14.681 26.707ZM14.681,26.707"
+      android:strokeWidth="0.5"
+      android:fillColor="@color/luckycloud_green"
+      android:strokeColor="@color/luckycloud_green"/>
+</vector>

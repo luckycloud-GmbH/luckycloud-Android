@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/cuc_ready_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/tv_title_margin_left"
+        android:layout_marginVertical="@dimen/tv_title_margin_top"
+        android:text="@string/cuc_ready_to_scan_title"
+        android:textAlignment="center"
+        android:textColor="@color/luckycloud_green"
+        android:textSize="@dimen/subtopic_txt_size" />
+
+    <TextView
+        android:id="@+id/cuc_ready_info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cuc_ready_title_tv"
+        android:layout_alignLeft="@+id/cuc_ready_title_tv"
+        android:layout_marginRight="30dp"
+        android:text="@string/cuc_ready_to_scan_detail"
+        android:textAlignment="center"
+        android:textColor="@color/fancy_gray"
+        android:textSize="@dimen/subtitle_txt_size"
+        android:lineSpacingMultiplier="@dimen/line_spacing_multiplier"/>
+
+    <TextView
+        android:id="@+id/cuc_click_to_finish_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cuc_ready_info_tv"
+        android:layout_alignLeft="@+id/cuc_ready_info_tv"
+        android:layout_marginTop="@dimen/tv_subtitle_margin_top"
+        android:text="@string/settings_cuc_click_btn"
+        android:textColor="@color/fancy_gray"
+        android:textSize="@dimen/subtopic_txt_size"
+        android:visibility="gone"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cuc_click_to_finish_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/long_btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/long_btn_margin_left"
+        android:layout_marginRight="@dimen/long_btn_margin_right"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/luckycloud_green"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/cuc_click_to_finish_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/long_btn_txt_size" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

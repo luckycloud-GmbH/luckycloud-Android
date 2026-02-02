@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_largest"
+    android:gravity="top|center_horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cuc_wel_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/tv_title_margin_top"
+        android:text="@string/settings_cuc_title"
+        android:textColor="@color/luckycloud_green"
+        android:textSize="@dimen/subtopic_txt_size" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/settings_cuc_welcome_text1"
+        android:textColor="@color/text_view_secondary_color"
+        android:textSize="@dimen/subtitle_txt_size"
+        android:lineSpacingMultiplier="1.2"
+        app:autoSizeTextType="uniform" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_title_margin_top"
+        android:gravity="center"
+        android:text="@string/settings_cuc_welcome_text2"
+        android:textColor="@color/text_view_secondary_color"
+        android:textSize="@dimen/subtitle_txt_size"
+        android:lineSpacingMultiplier="1.2"
+        app:autoSizeTextType="uniform" />
+</LinearLayout>

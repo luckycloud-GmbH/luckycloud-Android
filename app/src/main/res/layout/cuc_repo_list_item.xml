@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_big">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cuc_repo_list_item_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/dialog_msg_background"
+        app:cardCornerRadius="@dimen/margin_normal"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lv_item_height"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/cuc_repo_list_item_icon"
+                android:layout_width="@dimen/lv_icon_width"
+                android:layout_height="@dimen/lv_icon_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_normal" />
+
+            <ImageView
+                android:id="@+id/cuc_repo_list_item_space"
+                android:layout_width="@dimen/lv_space_width"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/cuc_repo_list_item_icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/cuc_repo_list_item_action"
+                android:layout_toRightOf="@id/cuc_repo_list_item_space"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cuc_repo_list_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/text_view_color"
+                    android:textSize="@dimen/subtitle_txt_size" />
+
+                <TextView
+                    android:id="@+id/cuc_repo_list_item_subtitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_view_secondary_color"
+                    android:textSize="@dimen/info_txt_size"
+                    android:fontFamily="@font/euclidsquare_regular"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cuc_repo_list_item_action"
+                android:layout_width="@dimen/lv_iv_action_width"
+                android:layout_height="fill_parent"
+                android:padding="@dimen/padding_big"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check"
+                android:visibility="visible"
+                app:tint="@color/luckycloud_green" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

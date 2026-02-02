@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/parentPanel"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginEnd="8dip"
+	android:layout_marginStart="8dip"
+	android:orientation="vertical"
+	android:background="@drawable/shadow_share_background">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/title_text"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/margin_large"
+			android:text="@string/download_link"
+			android:textSize="@dimen/dialog_msg_title_txt_size"
+			android:textColor="@color/luckycloud_green"
+			android:textAlignment="center"
+			android:visibility="visible"/>
+
+		<TextView
+			android:id="@+id/path_text"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/margin_large"
+			android:layout_marginTop="@dimen/margin_large"
+			android:text=""
+			android:textSize="@dimen/lv_download_state_txt_size"
+			android:textAlignment="center"
+			android:lineSpacingExtra="@dimen/task_dialog_content_line_spacing"/>
+
+		<androidx.cardview.widget.CardView
+			android:id="@+id/copy_card"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/share_edit_text_height"
+			android:layout_marginVertical="@dimen/margin_large"
+			android:layout_gravity="center"
+			android:clickable="true"
+			android:focusable="true"
+			android:foreground="?android:attr/selectableItemBackground"
+			app:cardBackgroundColor="@color/luckycloud_green"
+			app:cardCornerRadius="@dimen/share_edit_text_radius"
+			app:cardElevation="0dp">
+
+			<TextView
+				android:id="@+id/execute_ocr_summary"
+				android:layout_width="wrap_content"
+				android:layout_height="@dimen/share_edit_text_height"
+				android:layout_marginHorizontal="@dimen/margin_big"
+				android:gravity="center"
+				android:text="@string/copy"
+				android:textColor="@color/white"
+				android:textSize="@dimen/subtitle_txt_size" />
+
+		</androidx.cardview.widget.CardView>
+
+		<include
+			android:id="@+id/single_card_layout"
+			layout="@layout/dialog_button_single"/>
+	</LinearLayout>
+</RelativeLayout>

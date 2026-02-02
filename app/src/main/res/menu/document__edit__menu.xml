@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*#######################################################
+ *
+ *   Maintained 2017-2025 by Gregor Santner <gsantner AT mailbox DOT org>
+ *   License of this file: Apache 2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+#########################################################*/
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AlwaysShowAction">
+
+    <item
+        android:id="@+id/action_undo"
+        android:icon="@drawable/ic_action_undo"
+        android:title="@string/undo"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_redo"
+        android:icon="@drawable/ic_action_redo"
+        android:title="@string/redo"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/ic_action_save"
+        android:title="@string/save"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_preview_edit_toggle"
+        android:icon="@drawable/ic_eye_open"
+        android:title="@string/view"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_preview"
+        android:icon="@drawable/ic_eye_open"
+        android:title="@string/view_mode"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_edit"
+        android:icon="@drawable/ic_edit"
+        android:title="@string/edit_mode"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_wrap_words"
+        android:checkable="true"
+        android:icon="@drawable/ic_baseline_wrap_text_24"
+        android:title="@string/wrap_words"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_line_numbers"
+        android:checkable="true"
+        android:icon="@drawable/ic_line_numbers_24dp"
+        android:title="@string/line_numbers"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_enable_highlighting"
+        android:checkable="true"
+        android:icon="@drawable/ic_format_color_fill_black_24dp"
+        android:title="@string/syntax_highlighting"
+        app:showAsAction="never" />
+</menu>

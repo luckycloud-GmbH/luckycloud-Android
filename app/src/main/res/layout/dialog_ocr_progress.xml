@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#59292929">
+
+	<ProgressBar
+		style="@style/loading"
+		android:id="@+id/progress_bar"
+		android:layout_width="@dimen/login_progress_logo_width"
+		android:layout_height="@dimen/login_progress_logo_width"
+		android:layout_centerInParent="true"/>
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/close_card"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_margin="@dimen/margin_large"
+		android:clickable="true"
+		android:focusable="true"
+		android:foreground="@android:color/transparent"
+		app:cardBackgroundColor="@android:color/transparent"
+		app:cardCornerRadius="0dp"
+		app:cardElevation="0dp">
+
+		<ListView
+			android:id="@+id/ocr_progress_listview"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:divider="@drawable/lv_divider_inset"
+			android:scrollbars="none"
+			android:background="@android:color/transparent"/>
+	</androidx.cardview.widget.CardView>
+</RelativeLayout>

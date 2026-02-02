@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bottom_bar_background"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/toolbar_actionbar" /> <!-- placeholder, empty except on L -->
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/edit_text_container_side_padding"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/https_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cb_padding_left"
+                android:button="@drawable/rounded_checkbox"
+                android:paddingStart="10dp"
+                android:onClick="onHttpsCheckboxClicked"
+                android:text="@string/accounts_https_hint"
+                android:textColor="@color/text_view_color"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/form_padding_top"
+                android:paddingBottom="@dimen/form_padding_bottom">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="20dp">
+
+                    <com.seafile.seadroid2.ui.EmailAutoCompleteTextView
+                        android:id="@+id/email_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edit_text_container_diameter"
+                        android:background="@drawable/rounded_account_edittext"
+                        android:ems="10"
+                        android:hint="@string/email_hint"
+                        android:importantForAutofill="auto"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/edit_text_container_radius"
+                        android:paddingEnd="@dimen/edit_text_container_diameter"
+                        android:textColor="@color/account_edit_text_foreground"
+                        android:fontFamily="@font/euclidsquare_medium"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/edit_text_container_diameter"
+                        android:layout_height="@dimen/edit_text_container_diameter"
+                        android:layout_alignEnd="@+id/email_address">
+
+                        <ImageView
+                            android:id="@+id/iv_delete_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:layout_marginTop="@dimen/margin_normal"
+                            android:layout_marginEnd="@dimen/margin_normal"
+                            android:layout_marginBottom="@dimen/margin_normal"
+                            android:padding="@dimen/padding_small"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_clear_text"
+                            app:tint="@color/text_view_secondary_color" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edit_text_container_diameter"
+                        android:layout_marginBottom="@dimen/et_margin_bottom"
+                        android:background="@drawable/rounded_account_edittext"
+                        android:ems="10"
+                        android:hint="@string/passwd_hint"
+                        android:importantForAutofill="auto"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/edit_text_container_radius"
+                        android:paddingEnd="@dimen/edit_text_container_diameter"
+                        android:textColor="@color/account_edit_text_foreground"
+                        android:fontFamily="@font/euclidsquare_medium"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/edit_text_container_diameter"
+                        android:layout_height="@dimen/edit_text_container_diameter"
+                        android:layout_alignEnd="@+id/password"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_delete_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="@dimen/margin_normal"
+                            android:padding="@dimen/padding_small"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_clear_text"
+                            app:tint="@color/text_view_secondary_color"
+                            android:visibility="invisible"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_layout_eye"
+                        android:layout_width="@dimen/edit_text_container_diameter"
+                        android:layout_height="@dimen/edit_text_container_diameter"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/transparent">
+
+                        <ImageView
+                            android:id="@+id/iv_eye_click"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="@dimen/margin_normal"
+                            android:padding="@dimen/padding_small"
+                            android:src="@drawable/ic_eye_close"
+                            app:tint="@color/text_view_secondary_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/status_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="@color/red"
+                    android:textAlignment="center"/>
+
+                <CheckBox
+                    android:id="@+id/enterprise_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingStart="10dp"
+                    android:button="@drawable/rounded_checkbox"
+                    android:text="@string/enterprise_login"
+                    android:textColor="@color/text_view_color"
+                    android:textSize="@dimen/title_txt_size"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/server_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edit_text_container_diameter"
+                        android:background="@drawable/rounded_account_edittext"
+                        android:ems="10"
+                        android:hint="@string/server_hint"
+                        android:importantForAutofill="auto"
+                        android:inputType="textUri"
+                        android:paddingStart="@dimen/edit_text_container_radius"
+                        android:paddingEnd="@dimen/edit_text_container_diameter"
+                        android:textColor="@color/account_edit_text_foreground"
+                        android:fontFamily="@font/euclidsquare_medium"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/auth_token_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/enter_2fa_token"
+                        android:textColor="@color/text_view_color"
+                        android:textSize="@dimen/subtitle_txt_size"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+
+                    <com.androidutillibrary.otputil.OtpView
+                        android:id="@+id/auth_token_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:bar_enabled="true"
+                        app:bar_height="0dp"
+                        app:bar_margin_bottom="0dp"
+                        app:bar_margin_left="2dp"
+                        app:bar_margin_right="2dp"
+                        app:bar_success_color="@color/blue"
+                        app:width="@dimen/account_detail_otp_width"
+                        app:height="@dimen/account_detail_otp_width"
+                        app:otp_box_background="@color/box_color"
+                        app:length="6"
+                        app:otp=""
+                        app:otp_text_size="14dp"
+                        app:android_textColor="@color/account_edit_text_foreground"
+                        app:otp_box_background_active="@drawable/token_input_normal"
+                        app:otp_box_background_inactive="@drawable/token_input_normal"
+                        app:otp_box_background_success="@drawable/token_input_normal"
+                        app:otp_box_background_error="@drawable/token_input_error"/>
+
+                    <TextView
+                        android:id="@+id/auth_token_error_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/red"
+                        android:textAlignment="center"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/auth_token_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/two_factor_auth_token"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/auth_token"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/auto_complete_ed_margin_left"
+                        android:layout_marginRight="@dimen/auto_complete_ed_margin_right"
+                        android:layout_marginBottom="@dimen/et_margin_bottom"
+                        android:importantForAutofill="auto"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/remember_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/auto_complete_ed_margin_left"
+                android:layout_marginRight="@dimen/auto_complete_ed_margin_left"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:button="@drawable/rounded_checkbox"
+                android:text="@string/two_factor_auth_remember_phone"
+                android:textColor="@color/text_view_color"
+                android:textSize="@dimen/title_txt_size"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/long_btn_margin_left"
+                android:paddingBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_container_diameter"
+                    android:layout_marginTop="30dp"
+                    android:onClick="login"
+                    android:text="@string/add_account"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_button"/>
+
+                <Button
+                    android:id="@+id/btnBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_container_diameter"
+                    android:background="@drawable/rounded_button"
+                    android:layout_marginTop="20dp"
+                    android:text="Biometric Auth"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/single_sign_on_next_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_container_diameter"
+                    android:layout_marginTop="20dp"
+                    android:onClick="ssoLogin"
+                    android:text="@string/shib_login_title"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_button"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<TextView-->
+    <!--android:id="@+id/seahub_url_hint"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/tv_margin_left"-->
+    <!--android:layout_marginRight="@dimen/tv_margin_right"-->
+    <!--android:textSize="@dimen/tv_txt_size"-->
+    <!--android:text="@string/seahub_url_hint"/>-->
+</LinearLayout>

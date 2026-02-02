@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:padding="10dp">
+
+    <solid android:color="@color/search_background" />
+
+    <corners
+        android:bottomRightRadius="@dimen/searchbar_radius"
+        android:bottomLeftRadius="@dimen/searchbar_radius"
+        android:topLeftRadius="@dimen/searchbar_radius"
+        android:topRightRadius="@dimen/searchbar_radius" />
+</shape>

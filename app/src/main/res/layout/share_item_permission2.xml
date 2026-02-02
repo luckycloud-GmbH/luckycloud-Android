@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin_small"
+        android:paddingHorizontal="@dimen/dialog_msg_background_radius"
+        android:orientation="vertical">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/checked_image"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/checkbox_share_unchecked"/>-->
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_hint"
+            android:textSize="@dimen/info_txt_size"/>
+
+        <TextView
+            android:id="@+id/desc_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:lines="2"
+            android:ellipsize="end"
+            android:text="@string/description"
+            android:textSize="@dimen/info_txt_size"
+            android:textColor="@color/text_view_secondary_color"/>
+    </LinearLayout>
+</LinearLayout>

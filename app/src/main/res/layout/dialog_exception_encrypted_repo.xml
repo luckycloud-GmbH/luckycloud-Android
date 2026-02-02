@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/parentPanel"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginEnd="8dip"
+	android:layout_marginStart="8dip"
+	android:orientation="vertical"
+	android:background="@drawable/msg_background">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/title_text"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/margin_large"
+			android:text="@string/exception_enc_repo"
+			android:textSize="@dimen/dialog_msg_title_txt_size"
+			android:textColor="@color/luckycloud_green"
+			android:textAlignment="center"
+			android:visibility="visible"/>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/task_dialog_inner_padding">
+
+			<TextView
+				android:id="@+id/detail_text"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="@dimen/task_dialog_content_margin_horizontal"
+				android:text="@string/using_enc_repo"
+				android:textSize="@dimen/lv_download_state_txt_size"
+				android:textAlignment="center"
+				android:lineSpacingExtra="10dp" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/task_dialog_inner_padding">
+
+			<TextView
+				android:id="@+id/ask_text"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="@dimen/task_dialog_content_margin_horizontal"
+				android:text="@string/make_exception_used_encrypted_repo"
+				android:textSize="@dimen/lv_download_state_txt_size"
+				android:textAlignment="center"
+				android:lineSpacingExtra="10dp" />
+		</LinearLayout>
+
+		<include
+			android:id="@+id/double_card_layout"
+			layout="@layout/dialog_button_double"/>
+	</LinearLayout>
+</RelativeLayout>

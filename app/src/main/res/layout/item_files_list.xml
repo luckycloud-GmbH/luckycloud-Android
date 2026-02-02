@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/lv_item_height">
+
+    <ImageView
+        android:id="@+id/iv_file_type_fileitem"
+        android:layout_width="@dimen/lv_icon_width"
+        android:layout_height="@dimen/lv_icon_width"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_empty_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/iv_file_type_fileitem"
+        android:layout_toStartOf="@+id/checkbox_file_fileitem"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_file_name_fileitem"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/text_view_color"
+            android:textSize="@dimen/lv_title_txt_size" />
+
+        <TextView
+            android:id="@+id/tv_file_detail_fileitem"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/text_view_secondary_color"
+            android:textSize="@dimen/lv_subtitle_txt_size" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox_file_fileitem"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:paddingStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/rounded_checkbox"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:checked="false"/>
+</RelativeLayout>

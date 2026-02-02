@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/task_dialog_inner_padding">
+
+    <TextView
+        android:id="@+id/delete_repo_confirmation_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/task_dialog_content_margin_horizontal"
+        android:text="@string/settings_account_sign_out_confirm"
+        android:textAlignment="center"
+        android:lineSpacingExtra="@dimen/task_dialog_content_line_spacing"/>
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/task_dialog_inner_padding"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/task_dialog_content_margin_horizontal"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/new_repo_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_msg_txt_height"
+            android:paddingHorizontal="@dimen/dialog_msg_txt_padding"
+            android:background="@drawable/rounded_edittext_dialog"
+            android:hint="@string/name_hint"
+            android:textColor="@color/text_view_color"
+            android:textColorHint="@color/dialog_msg_txt_hint"
+            android:inputType="text" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/new_repo_encrypt_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                android:checked="false"
+                android:thumb="@drawable/custom_switch_thumb_selector"
+                app:track="@drawable/custom_switch_track_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                android:paddingStart="3dp"
+                android:paddingLeft="3dp"
+                android:paddingEnd="3dp"
+                android:paddingRight="3dp"
+                android:text="@string/encrypted"
+                android:textColor="@color/text_view_color"/>
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_new_repo_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_large"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/new_repo_password"
+                    android:hint="@string/passwd_min_len_limit_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dialog_msg_txt_height"
+                    android:paddingHorizontal="@dimen/dialog_msg_txt_padding"
+                    android:background="@drawable/rounded_edittext"
+                    android:inputType="textPassword"/>
+
+                <EditText
+                    android:id="@+id/new_repo_password_confirmation"
+                    android:hint="@string/passwd_confirmation_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dialog_msg_txt_height"
+                    android:paddingHorizontal="@dimen/dialog_msg_txt_padding"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:background="@drawable/rounded_edittext"
+                    android:inputType="textPassword" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

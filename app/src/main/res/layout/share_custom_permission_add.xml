@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/share_custom_permission_add_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/permission_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/share_edit_text_height"
+            android:background="@drawable/rounded_edittext_share"
+            android:ems="10"
+            android:fontFamily="@font/euclidsquare_medium"
+            android:hint="@string/permission_name"
+            android:importantForAutofill="auto"
+            android:inputType="text"
+            android:paddingStart="@dimen/share_edit_text_radius"
+            android:paddingEnd="@dimen/share_edit_text_radius"
+            android:textColor="@color/text_view_color"
+            android:textSize="@dimen/info_txt_size"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/permission_desc_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/share_edit_text_height"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:background="@drawable/rounded_edittext_share"
+            android:ems="10"
+            android:fontFamily="@font/euclidsquare_medium"
+            android:hint="@string/description"
+            android:importantForAutofill="auto"
+            android:inputType="textMultiLine"
+            android:paddingStart="@dimen/share_edit_text_radius"
+            android:paddingEnd="@dimen/share_edit_text_radius"
+            android:textColor="@color/text_view_color"
+            android:textSize="@dimen/info_txt_size"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/upload_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:background="@null"
+                android:thumb="@drawable/custom_switch_thumb_selector"
+                app:track="@drawable/custom_switch_track_selector" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upload"
+                android:textSize="@dimen/info_txt_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/download_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:background="@null"
+                android:thumb="@drawable/custom_switch_thumb_selector"
+                app:track="@drawable/custom_switch_track_selector" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/download_cache"
+                android:textSize="@dimen/info_txt_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/create_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:background="@null"
+                android:thumb="@drawable/custom_switch_thumb_selector"
+                app:track="@drawable/custom_switch_track_selector" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/create"
+                android:textSize="@dimen/info_txt_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/modify_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:background="@null"
+                android:thumb="@drawable/custom_switch_thumb_selector"
+                app:track="@drawable/custom_switch_track_selector" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/modify"
+                android:textSize="@dimen/info_txt_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/copy_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:background="@null"
+                android:thumb="@drawable/custom_switch_thumb_selector"
+                app:track="@drawable/custom_switch_track_selector" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/copy"
+                android:textSize="@dimen/info_txt_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/delete_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:background="@null"
+                android:thumb="@drawable/custom_switch_thumb_selector"
+                app:track="@drawable/custom_switch_track_selector" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textSize="@dimen/info_txt_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/preview_online_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:background="@null"
+                android:thumb="@drawable/custom_switch_thumb_selector"
+                app:track="@drawable/custom_switch_track_selector" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preview_online"
+                android:textSize="@dimen/info_txt_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/generate_share_link_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:background="@null"
+                android:thumb="@drawable/custom_switch_thumb_selector"
+                app:track="@drawable/custom_switch_track_selector" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/generate_share_link"
+                android:textSize="@dimen/info_txt_size"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/submit_card"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/share_edit_text_height"
+            app:cardCornerRadius="@dimen/share_edit_text_radius"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/luckycloud_green"
+            app:cardElevation="0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/share_edit_text_radius"
+                android:layout_gravity="center"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/info_txt_size"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

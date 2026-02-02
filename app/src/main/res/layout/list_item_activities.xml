@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/margin_large"
+    android:paddingTop="@dimen/margin_big">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/dialog_msg_background"
+        app:cardCornerRadius="@dimen/margin_normal"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_activities_old"
+                android:visibility="visible"
+                android:padding="@dimen/padding_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.seafile.seadroid2.ui.widget.CircleImageView
+                    android:id="@+id/iv_activities_avatar"
+                    android:layout_width="@dimen/lv_act_icon_width"
+                    android:layout_height="@dimen/lv_act_icon_height"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/account" />
+
+                <LinearLayout
+                    android:id="@+id/ll_activities_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_toEndOf="@id/iv_activities_avatar"
+                    android:layout_toStartOf="@+id/tv_activities_repo_name"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_activities_mod_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="desc"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_activities_nick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="nick"
+                            android:textColor="@color/luckycloud_green"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+
+                        <TextView
+                            android:id="@+id/tv_activities_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:maxLines="1"
+                            android:text="date"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_activities_repo_name"
+                    android:layout_width="@dimen/item_repo_name"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:text="repo_name"
+                    android:textColor="@color/luckycloud_green"
+                    android:textSize="@dimen/subtitle_txt_size"
+                    android:fontFamily="@font/euclidsquare_regular"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_activities_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_big"
+                android:paddingBottom="@dimen/padding_normal"
+                android:orientation="vertical">
+
+                <com.seafile.seadroid2.ui.widget.CircleImageView
+                    android:id="@+id/iv_activities_avatar_url"
+                    android:layout_width="@dimen/lv_act_icon_width"
+                    android:layout_height="@dimen/lv_act_icon_height"
+                    android:src="@drawable/ic_account"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/margin_normal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_activities_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:lines="1"
+                            android:text="user_name" />
+
+                        <TextView
+                            android:id="@+id/tv_activities_mod"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/padding_normal"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/luckycloud_green"
+                            android:textSize="@dimen/lv_download_state_txt_size"
+                            android:text="repo_name"/>
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tv_activities_state_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@color/luckycloud_green"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:id="@+id/tv_activities_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="2dp"
+                            android:layout_marginHorizontal="@dimen/margin_small"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/padding_small"
+                            android:paddingRight="@dimen/padding_small"
+                            android:singleLine="true"
+                            android:text="activity type"
+                            android:textColor="@color/field"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/tv_activities_icon_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/tv_activities_icon"
+                            android:layout_width="@dimen/lv_download_icon_width"
+                            android:layout_height="@dimen/lv_download_icon_height"
+                            android:src="@drawable/repo_encrypted" />
+
+                        <TextView
+                            android:id="@+id/tv_activities_desc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/euclidsquare_regular"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:text="file/folder name"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_activities_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:lineSpacingExtra="@dimen/margin_small"
+                        android:fontFamily="@font/euclidsquare_regular"
+                        android:gravity="start"
+                        android:textSize="@dimen/subtitle_txt_size"
+                        android:text="time"/>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tv_history_changes_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/padding_normal"
+                        android:paddingVertical="@dimen/padding_small">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_activities"
+                            android:textColor="@color/luckycloud_green"
+                            android:textSize="@dimen/subtitle_txt_size" />
+
+                        <ImageView
+                            android:id="@+id/tv_history_changes_image"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:src="@drawable/ic_down"
+                            app:tint="@color/luckycloud_green" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ListView
+                    android:id="@+id/tv_history_changes_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0dp"
+                    android:background="@android:color/transparent"
+                    android:scrollbars="none"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_activities_ce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_big"
+                android:paddingBottom="@dimen/padding_normal"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/padding_normal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/ce_author_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:text="user_name"/>
+
+                        <TextView
+                            android:id="@+id/ce_repo_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:maxWidth="100dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/luckycloud_green"
+                            android:textSize="@dimen/lv_download_state_txt_size"
+                            android:text="repo_name"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/ce_overview_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:text="desc"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:fontFamily="@font/euclidsquare_regular"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ce_time_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:lineSpacingExtra="@dimen/margin_small"
+                        android:ellipsize="end"
+                        android:text="time"
+                        android:textSize="@dimen/subtitle_txt_size"
+                        android:fontFamily="@font/euclidsquare_regular"/>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ce_history_changes_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_activities_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="18dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/padding_normal"
+                        android:paddingVertical="@dimen/padding_small"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_activities"
+                            android:textSize="@dimen/subtitle_txt_size"
+                            android:textColor="@color/luckycloud_green"/>
+
+                        <ImageView
+                            android:id="@+id/ce_history_changes_image"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:src="@drawable/ic_down"
+                            app:tint="@color/luckycloud_green" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/ce_overview_again_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/padding_normal"
+                    android:text="desc"
+                    android:textSize="@dimen/subtitle_txt_size"
+                    android:fontFamily="@font/euclidsquare_regular"/>
+
+                <ListView
+                    android:id="@+id/ce_history_changes_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0dp"
+                    android:background="@android:color/transparent"
+                    android:scrollbars="none"
+                    android:nestedScrollingEnabled="true"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

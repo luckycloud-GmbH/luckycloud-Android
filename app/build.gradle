@@ -1,0 +1,249 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    namespace 'com.seafile.seadroid2'
+
+    defaultConfig {
+        applicationId 'de.luckycloud.luckycloud'
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        compileSdk rootProject.ext.compileSdkVersion
+        versionCode 180
+        versionName "4.3.2"
+        multiDexEnabled true
+        setProperty("archivesBaseName",  "luckycloud-v" + versionName)
+        resValue "string", "authorities", applicationId + '.cameraupload.provider'
+        resValue "string", "account_type", "de.luckycloud.luckycloud.account.api2"
+        buildConfigField "String", "ACCOUNT_TYPE", '"de.luckycloud.luckycloud.account.api2"'
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64', 'x86'
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+        main.java.srcDirs += 'thirdparty/java'
+        main.res.srcDirs += 'thirdparty/res'
+        main.assets.srcDirs += 'thirdparty/assets'
+    }
+
+    signingConfigs {
+        debug {
+//            def props = new Properties()
+//            props.load(new FileInputStream(project.file("debugkey.properties")))
+//            storeFile project.file(props.keyStore)
+//            storePassword props.keyStorePassword
+//            keyAlias props.keyAlias
+//            keyPassword props.keyAliasPassword
+        }
+
+        release {
+//            Signing code for manual signing
+//            storeFile file(System.console().readLine("\n\$ Enter keystore path: "))
+//            storePassword System.console().readPassword("\n\$ Enter keystore password: ").toString()
+//            keyAlias System.console().readLine("\n\$ Enter key alias: ")
+//            keyPassword System.console().readPassword("\n\$ Enter key password: ").toString()
+
+//            def props = new Properties()
+//            props.load(new FileInputStream(project.file("key.properties")))
+//            storeFile project.file(props.keyStore)
+//            storePassword props.keyStorePassword
+//            keyAlias props.keyAlias
+//            keyPassword props.keyAliasPassword
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            applicationIdSuffix ".debug"
+            resValue "string", "authorities", defaultConfig.applicationId + '.debug.cameraupload.provider'
+            resValue "string", "account_type", "de.luckycloud.luckycloud.debug.account.api2"
+            buildConfigField "String", "ACCOUNT_TYPE", '"de.luckycloud.luckycloud.debug.account.api2"'
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
+                        if (variant.name == "debug")
+                            outputFileName = "luckycloud-debug-" + defaultConfig.versionName + ".apk"
+                    }
+                }
+            }
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
+                        if (variant.name == "release") {
+                            outputFileName = "luckycloud-" + defaultConfig.versionName + ".apk"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    bundle {
+        density {
+            enableSplit true
+        }
+        abi {
+            enableSplit true
+        }
+        language {
+            enableSplit true
+        }
+    }
+
+    allprojects {
+        repositories {
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    dependencies {
+        implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+        implementation files('libs/library-markdown.aar')
+        implementation files('libs/library-emoji.aar')
+
+        //media3
+        final def media3_version = '1.1.0'
+        implementation "androidx.media3:media3-exoplayer:$media3_version"
+        implementation "androidx.media3:media3-ui:$media3_version"
+
+        //DO NOT upgrade this lib, unless the APP upgrade to AndroidX
+        implementation 'com.blankj:utilcode:1.30.7'
+        //https://github.com/timusus/RecyclerView-FastScroll
+        implementation "com.simplecityapps:recyclerview-fastscroll:2.0.1"
+
+        implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+        implementation "com.android.support:design:${rootProject.ext.supportLibVersion}"
+        implementation "com.android.support:support-v4:${rootProject.ext.supportLibVersion}"
+        implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+        implementation 'com.tbuonomo:dotsindicator:5.0'
+
+        implementation 'com.github.kevinsawicki:http-request:6.0'
+        implementation 'commons-io:commons-io:2.11.0'
+        implementation 'com.google.guava:guava:18.0'
+        implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+        implementation 'com.cocosw:bottomsheet:1.5.0'
+        implementation 'com.github.Chrisbanes:PhotoView:2.3.0'
+        implementation 'com.joanzapata.iconify:android-iconify-material-community:2.2.1'
+        testImplementation 'junit:junit:4.12'
+        testImplementation 'org.robolectric:robolectric:3.0'
+        implementation 'com.madgag.spongycastle:core:1.54.0.0'
+        implementation 'com.madgag.spongycastle:prov:1.54.0.0'
+        implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+        implementation 'com.github.getActivity:XXPermissions:16.2'
+        implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+        implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+        implementation 'com.google.code.gson:gson:2.10'
+
+        implementation 'com.github.yydcdut.RxMarkdown:markdown-processor:v0.1.3'
+        implementation 'org.greenrobot:eventbus:3.3.1'
+        //glide
+        implementation 'com.github.bumptech.glide:glide:4.15.1'
+        annotationProcessor 'androidx.annotation:annotation:1.0.0'
+        annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+
+        implementation 'androidx.biometric:biometric:1.1.0'
+
+        //add to build
+        implementation 'androidx.fragment:fragment:1.3.5'
+        //add to merge kotlin
+        implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+        //add to 2FA-Token input module
+        implementation project(path: ':androidutillibrary')
+        //add QRGenerator
+        implementation 'com.github.androidmads:QRGenerator:1.0.1'
+
+        //        implementation 'com.github.tiagohm.MarkdownView:library:0.19.0'
+        //Markdown Flexmark
+        implementation "com.vladsch.flexmark:flexmark:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-util:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-emoji:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-gfm-tasklist:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-superscript:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-autolink:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-toc:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-tables:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-jekyll-front-matter:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-jekyll-tag:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-anchorlink:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-gfm-strikethrough:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-yaml-front-matter:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-footnotes:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-gitlab:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-typographic:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-admonition:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-abbreviation:${rootProject.ext.version_library_flexmark}"
+        implementation "com.vladsch.flexmark:flexmark-ext-attributes:${rootProject.ext.version_library_flexmark}"
+        //Logger
+        implementation 'com.orhanobut:logger:1.15'
+        //Android Lifecycle Extensions
+        implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+        implementation 'com.itextpdf:itextpdf:5.5.13.1'
+
+        implementation 'com.github.yalantis:ucrop:2.2.11-native'
+
+        implementation 'com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1'
+        //fix Duplicate class found of guava
+        // ToDo remove after update guava to version >= 27
+        implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+
+        implementation "com.itextpdf.android:kernel-android:7.2.3"
+        implementation "com.itextpdf.android:layout-android:7.2.3"
+        implementation 'cz.adaptech.tesseract4android:tesseract4android-openmp:4.9.0'
+
+        implementation "com.github.bhuvaneshw.pdfviewer:core:1.1.1"
+        implementation "com.github.bhuvaneshw.pdfviewer:ui:1.1.1"
+        implementation "com.jaredrummler:colorpicker:1.1.0"
+        implementation "com.google.android.material:material:1.12.0"
+        implementation "com.github.MohammedAlaaMorsi:RangeSeekBar:1.0.6"
+
+        implementation 'androidx.browser:browser:1.4.0'
+
+        implementation('com.opencsv:opencsv:3.10') {
+            // do not get transitive 'commons-beanutils:commons-beanutils as the opencsv bean <-> csv feature is not used
+            exclude group: 'commons-beanutils', module: 'commons-beanutils'
+        }
+
+        // Instrumented test dependencies
+        androidTestImplementation 'androidx.test:core:1.5.0'
+        androidTestImplementation 'androidx.test:runner:1.5.2'
+        androidTestImplementation 'androidx.test:rules:1.5.0'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+        androidTestImplementation 'androidx.test.espresso:espresso-intents:3.5.1'
+        androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.3.0'
+    }
+}

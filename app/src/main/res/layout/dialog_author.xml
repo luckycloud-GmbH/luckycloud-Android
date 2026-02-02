@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="30dp"
+    android:paddingHorizontal="30dp"
+    android:background="@drawable/msg_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:text="@string/luckycloud_settings_about_author_client"/>
+
+    <TextView
+        android:id="@+id/version_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:text=""
+        android:textColor="@color/text_view_secondary_color"
+        android:textSize="@dimen/subtitle_txt_size"
+        android:fontFamily="@font/euclidsquare_regular"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:text="@string/luckycloud_settings_about_author_client_url"
+        android:textColor="@color/text_view_secondary_color"
+        android:textSize="@dimen/subtitle_txt_size"
+        android:fontFamily="@font/euclidsquare_regular"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:text="@string/luckycloud_settings_about_author_licenses"/>
+
+    <TextView
+        android:id="@+id/licenses_url_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/luckycloud_settings_about_author_licenses_url"
+        android:textColor="@color/text_view_secondary_color"
+        android:textSize="@dimen/subtitle_txt_size"
+        android:fontFamily="@font/euclidsquare_regular"/>
+
+</LinearLayout>

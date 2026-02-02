@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrictions xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <restriction
+        android:key="login_configuration"
+        android:title="@string/login"
+        android:restrictionType="bundle">
+        <restriction
+            android:key="login_server"
+            android:title="@string/server_hint"
+            android:restrictionType="string"/>
+        <restriction
+            android:key="login_user"
+            android:title="@string/email_hint"
+            android:restrictionType="string"/>
+        <restriction
+            android:key="login_password"
+            android:title="@string/passwd_hint"
+            android:restrictionType="string"/>
+    </restriction>
+
+</restrictions>

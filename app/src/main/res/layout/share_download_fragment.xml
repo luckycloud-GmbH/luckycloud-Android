@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/padding_normal"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/share_item_margin_horizontal"
+        android:layout_marginBottom="@dimen/share_item_margin_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_msg_background"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/share_create_link_layout"
+                layout="@layout/share_download_create_link" />
+
+            <include
+                android:id="@+id/share_copy_link_layout"
+                layout="@layout/share_download_copy_link" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/popup_select_datetime_layout"
+        layout="@layout/popup_select_datetime"
+        android:visibility="invisible"/>
+
+    <include
+        android:id="@+id/popup_select_link_layout"
+        layout="@layout/popup_select_link"
+        android:visibility="invisible"/>
+
+    <include
+        android:id="@+id/popup_select_permission_layout"
+        layout="@layout/popup_select_permission"
+        android:visibility="invisible"/>
+</RelativeLayout>

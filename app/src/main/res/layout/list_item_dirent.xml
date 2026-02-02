@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_big">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/dialog_msg_background"
+        app:cardCornerRadius="@dimen/margin_normal"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/lv_item_height"
+            android:paddingEnd="@dimen/lv_item_inset"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/list_item_multi_select_btn"
+                android:layout_width="@dimen/lv_multi_select_width"
+                android:layout_height="@dimen/lv_multi_select_height"
+                android:paddingStart="@dimen/lv_multi_select_padding_left"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/lv_icon_height"
+                android:layout_marginStart="@dimen/lv_item_padding_left"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/list_item_icon"
+                    android:layout_width="@dimen/lv_icon_width"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/repo_encrypted" />
+
+                <LinearLayout
+                    android:id="@+id/list_item_icon_image_layout"
+                    android:layout_width="@dimen/lv_icon_width2"
+                    android:layout_height="@dimen/lv_icon_height2"
+                    android:background="@drawable/rounded_image"
+                    android:weightSum="1"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/list_item_icon_image"
+                        android:layout_width="36dp"
+                        android:layout_height="46dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/list_item_icon_file_layout"
+                    android:layout_width="@dimen/lv_icon_width2"
+                    android:layout_height="@dimen/lv_icon_height2"
+                    android:background="@drawable/ic_file"
+                    android:gravity="bottom|end"
+                    android:paddingHorizontal="@dimen/padding_small"
+                    android:paddingVertical="@dimen/padding_small"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/list_item_icon_file_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitEnd"
+                        android:layout_gravity="bottom"/>
+
+                    <TextView
+                        android:id="@+id/list_item_icon_file_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/subinfo_txt_size"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/list_item_space"
+                android:layout_width="@dimen/lv_space_width"
+                android:layout_height="fill_parent" />
+
+            <LinearLayout
+                android:id="@+id/list_item_txt_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/list_item_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="start"
+                    android:fontFamily="@font/euclidsquare_medium"
+                    android:textSize="@dimen/subtitle_txt_size"
+                    android:textColor="@color/text_view_color"/>
+
+                <TextView
+                    android:id="@+id/list_item_subtitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/euclidsquare_regular"
+                    android:textColor="@color/text_view_secondary_color"
+                    android:textSize="@dimen/subtitle_txt_size" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/list_item_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:src="@drawable/ic_right"
+                app:tint="@color/luckycloud_green" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/popup_background"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/share_edit_text_height"
+        android:padding="5dp"
+        android:background="@drawable/rounded_searchbar_background2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:background="@null"
+            android:src="@drawable/ic_search"/>
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:hint="@string/enter_character"
+            android:minHeight="@dimen/share_edit_text_height"
+            android:singleLine="true"
+            android:textSize="@dimen/info_txt_size"
+            android:textColor="@color/text_view_color"/>
+
+        <ImageButton
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="6dp"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:src="@drawable/ic_clear_text"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

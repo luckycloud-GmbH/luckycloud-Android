@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:padding="10dp">
+
+    <solid android:color="@color/dialog_msg_background" />
+
+    <corners
+        android:bottomRightRadius="@dimen/dialog_msg_background_radius"
+        android:bottomLeftRadius="@dimen/dialog_msg_background_radius"
+        android:topLeftRadius="@dimen/dialog_msg_background_radius"
+        android:topRightRadius="@dimen/dialog_msg_background_radius" />
+</shape>

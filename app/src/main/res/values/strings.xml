@@ -1,0 +1,1083 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+  <string name="app_name" translatable="false">luckycloud</string>
+
+  <string name="server_url_seacloud" translatable="false">https://storage.luckycloud.de/</string>
+  <string name="server_url_sync" translatable="false">https://sync.luckycloud.de/</string>
+  <string name="server_name_top" translatable="false">storage.luckycloud.de</string>
+
+  <string name="accounts_https_hint" translatable="false">https</string>
+  <string name="auto_server_url_error" translatable="false">Login failed with storage.luckycloud.de,
+    try again with sync.luckycloud.de</string>
+  <string name="enterprise_example_url" translatable="false">https://cloud.IhreDomain.de</string>
+
+  <string name="support">Support</string>
+  <string name="new_luckycloud_account">new Account</string>
+  <string name="enterprise_login_button">Enterprise Login</string>
+  <string name="setting_privacy_policy_title" >Privacy policy</string>
+  <string name="biometry_login_title">Access lock</string>
+  <string name="welcome_to_seafile">Welcome to luckycloud</string>
+  <string name="welcome_to_luckycloud">Welcome to</string>
+  <string name="select_account">Choose an account to start</string>
+  <string name="edit_account">Edit</string>
+  <string name="delete_account">Delete</string>
+  <string name="delete">Delete</string>
+  <string name="delete_repo">Are you sure you want to delete this directory?</string>
+  <string name="delete_file">Are you sure you want to delete this file or folder?</string>
+  <string name="delete_successful">Successfully deleted</string>
+  <string name="delete_repo_title">Delete directory</string>
+  <string name="delete_file_f">Delete file</string>
+  <string name="recover_library">Recover directory</string>
+  <string name="recover_file">Recover file</string>
+  <string name="move_file">Move file</string>
+  <string name="update_file">Update file</string>
+  <string name="recover_folder">Recover folder</string>
+  <string name="move_folder">Move folder</string>
+  <string name="delete_dir">Delete folder</string>
+  <string name="name_hint">Name</string>
+  <string name="server_hint">server address</string>
+  <string name="email_hint">Email or Username</string>
+  <string name="passwd_hint">Password</string>
+  <string name="passwd_min_len_limit_hint">Password (at least %d characters)</string>
+  <string name="passwd_confirmation_hint">Password again</string>
+  <string name="login">Log In</string>
+  <string name="open_file">Open</string>
+  <string name="download_file">Download</string>
+  <string name="redownload_file">Download again</string>
+  <string name="cancel_download">Cancel</string>
+  <string name="unknown_file_type">Unknown file-type</string>
+  <string name="activity_not_found">Can\`t find App to open this file</string>
+  <string name="refresh">Refresh</string>
+  <string name="add_account">Login</string>
+  <string name="personal">Personal</string>
+  <string name="shared">Shared</string>
+  <string name="libraries">Libraries</string>
+  <string name="cached">Cached</string>
+  <string name="activities">Activities</string>
+  <string name="pick_upload_type">Upload</string>
+  <string name="transfer_tasks">Transfer List</string>
+  <string name="accounts">Accounts</string>
+  <string name="settings">Settings</string>
+  <string-array name="pick_upload_array">
+    <item>File</item>
+    <item>Photos/Videos</item>
+    <item>Other</item>
+  </string-array>
+  <string name="choose_server">Choose a luckycloud Server</string>
+  <string-array name="choose_server_array">
+    <item>Single Sign-On</item>
+    <item>Other luckycloud Server</item>
+  </string-array>
+  <string name="network_down">No network connection</string>
+  <string name="unknow_error">Unknown error</string>
+  <string name="invalid_server_address">Invalid server address</string>
+  <string name="err_server_andress_empty">Server address can\`t be empty</string>
+  <string name="err_email_empty">Email can\`t be empty</string>
+  <string name="err_passwd_empty">Password can\`t be empty</string>
+  <string name="err_passwd_too_short">Password is too short</string>
+  <string name="err_passwd_mismatch">The passwords don\`t match</string>
+  <string name="err_passwd_min_len_limit">Password must be at least %d characters long</string>
+  <string name="err_login_failed">Login failed</string>
+  <string name="err_wrong_user_or_passwd">Email or password error</string>
+  <string name="err_token_expired">Authentication expired, please login again</string>
+  <string name="upload">Upload</string>
+  <string name="uploaded">Uploaded</string>
+  <string name="updated">Updated</string>
+  <string name="download_failed">Download failed</string>
+  <string name="download_waiting">Download waiting</string>
+  <string name="download_finished">Download finished</string>
+  <string name="download_cancelled">Download cancelled</string>
+  <string name="task_cancel">Cancel</string>
+  <string name="task_retry">Retry</string>
+  <string name="task_remove">Remove</string>
+  <string name="task_remove_all_cancelled">Remove all cancelled tasks</string>
+  <string name="task_remove_all_finished">Remove all finished tasks </string>
+  <string name="repo_action_delete">Delete</string>
+  <string name="repo_action_rename">Rename</string>
+  <string name="file_action_star">Star</string>
+  <string name="file_action_download">Download</string>
+  <string name="file_action_update">Upload</string>
+  <string name="file_share">Share</string>
+  <string name="file_action_share_wechat">Share to WeChat</string>
+  <string name="file_action_share_link">Share link</string>
+  <string name="file_action_share_encrypt">Share link with password</string>
+  <string name="file_action_export">Export</string>
+  <string name="file_action_open">Open with</string>
+  <string name="file_action_delete">Delete</string>
+  <string name="file_action_rename">Rename</string>
+  <string name="file_action_copy">Copy</string>
+  <string name="file_action_move">Move</string>
+  <string name="file_action_open_as">Open as</string>
+  <string name="file_action_more">More</string>
+  <string name="file_action_more_title">Choose your preferred option</string>
+  <string-array name="file_action_more_array">
+    <item>Export</item>
+    <item>Copy</item>
+    <item>Move</item>
+    <item>Star</item>
+  </string-array>
+  <string-array name="file_type_array">
+    <item>Text</item>
+    <item>Audio</item>
+    <item>Video</item>
+    <item>Image</item>
+    <item>Other</item>
+  </string-array>
+  <string-array name="file_action_share_array_zh" translatable="false">
+    <item>@string/file_action_share_wechat</item>
+    <item>@string/file_action_share_link</item>
+    <item>@string/file_action_share_encrypt</item>
+  </string-array>
+  <string-array name="file_action_share_array" translatable="false">
+    <item>@string/file_action_share_link</item>
+    <item>@string/file_action_share_encrypt</item>
+  </string-array>
+  <string name="wait">Wait</string>
+  <string name="image_gallery_NoImageView_text">No image found</string>
+  <string name="pick_photo_video_title">Choose photos/videos to upload</string>
+  <string name="select_upload_items">Select items to upload</string>
+  <plurals name="n_upload_items_selected">
+    <item quantity="one">%1$d item selected</item>
+    <item quantity="other">%1$d items selected</item>
+  </plurals>
+  <string name="repo_name_empty">Please enter the name of the directory</string>
+  <string name="dir_name_empty">Please enter the name of the folder</string>
+  <string name="file_name_empty">Please enter the name of the file</string>
+  <string name="password_empty">Please enter the password</string>
+  <string name="wrong_password">wrong password</string>
+  <string name="library_read_only">This directory is read-only</string>
+  <string name="error_when_load_dirents">Error when loading the folder.\n Tap to refresh</string>
+  <string name="error_when_load_repos">Error when loading libraries.\n Tap to refresh</string>
+  <string name="error_when_load_activities">Error when loading activities.\n Tap to refresh</string>
+  <string name="error_when_load_starred">Error when loading starred files.\n Tap to refresh</string>
+  <string name="dir_empty">This folder is empty</string>
+  <string name="no_repo">You have no libraries yet</string>
+  <string name="no_app_available">No app can be found</string>
+  <string name="add_to_seafile">Add to luckycloud</string>
+  <string name="ok">OK</string>
+  <string name="no_account">Please set up an account in luckycloud first</string>
+  <string name="choose_an_account">Choose an account</string>
+  <string name="choose_a_library">Choose a directory</string>
+  <string name="choose_a_folder">Choose a folder</string>
+  <string name="load_accounts_fail">Failed to load luckycloud accounts</string>
+  <string name="luckycloud_load_accounts_fail">Failed to load luckycloud accounts</string>
+  <string name="load_libraries_fail">Failed to load libraries</string>
+  <string name="load_dir_fail">Failed to load contents of this folder</string>
+  <string name="not_supported_share">This type of share is not supported</string>
+  <string name="edit">Edit</string>
+  <string name="create_draft">Create draft</string>
+  <string name="rename_draft">Rename draft</string>
+  <string name="del_draft">Delete draft</string>
+  <string name="update_draft">Update draft</string>
+  <string name="release_draft">Release draft</string>
+  <string name="encrypt">Encrypt</string>
+  <string name="download_folder">Download folder</string>
+  <string name="download_folder_title">Choose your preferred option</string>
+  <string-array name="download_folder_options_array">
+    <item>Download folder</item>
+    <item>Download folder and subfolders</item>
+  </string-array>
+  <string name="add_repo">New directory</string>
+  <string name="add_file">Add</string>
+  <string-array name="add_file_options_array">
+    <item>Create file</item>
+    <item>Create folder</item>
+    <item>Upload file</item>
+    <item>Take a photo</item>
+  </string-array>
+  <string-array name="video_download_array">
+    <item>play</item>
+    <item>download</item>
+  </string-array>
+  <string name="create_new_repo">Create a new directory</string>
+  <string name="create_new_repo_success">Successfully created directory %s</string>
+  <string name="create_new_folder_success">Successfully created folder %s</string>
+  <string name="create_new_file_success">Successfully created file %s</string>
+  <string name="create_new_file">Create a new file</string>
+  <string name="create_files">Create files</string>
+  <string name="create_new_dir">Create a new folder</string>
+  <string name="camera">Take a photo here</string>
+  <string name="save_on_device">Save on device</string>
+  <string name="download">Download</string>
+  <string name="download_cache">Download (Cache)</string>
+  <string name="open">Open</string>
+  <string name="last_modified">Last modified</string>
+  <string name="file_modified">modified</string>
+  <string name="file_size">file size</string>
+  <string name="library_not_found">The directory has been deleted.</string>
+  <string name="file_not_found">The file \"%s\" has been deleted</string>
+  <string name="export_file">Export this file</string>
+  <string name="no_upload_tasks">No upload tasks yet</string>
+  <string name="no_download_tasks">No download tasks yet</string>
+  <string name="seahub_url_hint">Note: Server address should contain the port. For example, www.example.com:8000</string>
+  <string name="copy_link">Copy link</string>
+  <string name="share_file_link">Share a link to this file</string>
+  <string name="share_dir_link">Share a link to this folder</string>
+  <string name="share_input_password">input share password</string>
+  <string name="generating_link">Generating link…</string>
+  <string name="link_ready_to_be_pasted">The link is ready to be pasted.</string>
+  <string name="rename_repo">Rename directory</string>
+  <string name="rename_file">Rename file</string>
+  <string name="rename_dir">Rename folder</string>
+  <string name="rename_successful">Renamed successfully.</string>
+  <string-array name="nav_array">
+    <item>Files</item>
+    <item>Uploads</item>
+    <item>Accounts</item>
+    <item>Backup Photos</item>
+  </string-array>
+  <string name="no_starred_file">No starred file yet</string>
+  <string name="added_to_upload_tasks">Uploading started</string>
+  <string name="added_photo_to_upload_tasks">Photo uploading started</string>
+  <string name="take_photo_successfully">Take photo successfully</string>
+  <string name="tabs_library">Libraries</string>
+  <string name="tabs_activity">Activities</string>
+  <string name="tabs_starred">Starred</string>
+  <string name="provide_password">Provide the password for directory \"%s\"</string>
+  <string name="upload_waiting">Upload waiting</string>
+  <string name="upload_finished">Upload finished</string>
+  <string name="upload_cancelled">Upload cancelled</string>
+  <string name="upload_failed">Upload failed</string>
+  <string name="upload_file_exist">File already exists</string>
+  <string name="upload_duplicate_found1">An item named \"%s\" already exist in this location.</string>
+  <string name="upload_duplicate_found2">Do you want to replace it with the one you\`re uploading?</string>
+  <string name="upload_replace_all">Replace All</string>
+  <string name="upload_keep_both">Keep Both</string>
+  <string name="upload_replace">Replace</string>
+  <string name="year_ago">%d year ago</string>
+  <string name="years_ago">%d years ago</string>
+  <string name="month_ago">%d month ago</string>
+  <string name="months_ago">%d months ago</string>
+  <string name="day_ago">%d day ago</string>
+  <string name="days_ago">%d days ago</string>
+  <string name="hour_ago">%d hour ago</string>
+  <string name="hours_ago">%d hours ago</string>
+  <string name="minute_ago">%d minute ago</string>
+  <string name="minutes_ago">%d minutes ago</string>
+  <string name="second_ago">%d second ago</string>
+  <string name="seconds_ago">%d seconds ago</string>
+  <string name="just_now">Just now</string>
+  <string name="open_as">Open as</string>
+  <string name="select_upload_files">Select files to upload</string>
+  <string name="storage_removed">Storage was removed</string>
+  <string name="storage_space_insufficient">Insufficient storage space</string>
+  <string name="error_selecting_file">Error when selecting file</string>
+  <plurals name="n_upload_files_selected">
+    <item quantity="one">%1$d file selected</item>
+    <item quantity="other">%1$d files selected</item>
+  </plurals>
+  <string name="empty_folder">Empty folder</string>
+  <string name="choose_file">Choose a file</string>
+  <string name="ssl_error">Security check failed</string>
+  <string name="ssl_confirm">The security certificate of %s is not trusted. Do you want to continue?</string>
+  <string name="ssl_confirm_cert_changed">%s uses an invalid security certificate. The connection is not secure. Continue anyway?</string>
+  <string name="ssl_confirm_title">Untrusted Connection</string>
+  <string name="issued_to">Issued To</string>
+  <string name="finger_prints">Fingerprints</string>
+  <string name="period_of_validity">Period of Validity</string>
+  <string name="sha256" translatable="false">SHA-256 %s</string>
+  <string name="sha1">SHA-1 %s</string>
+  <string name="md5">MD5 %s</string>
+  <string name="not_available">not available</string>
+  <string name="serial_number">Serial number %s</string>
+  <string name="not_before">Valid from %s</string>
+  <string name="not_after">Valid until %s</string>
+  <string name="yes">Yes</string>
+  <string name="no">No</string>
+  <string name="remember_my_choice">Remember my choice</string>
+  <string name="copied_successfully">Copied successfully</string>
+  <string name="moved_successfully">Moved successfully</string>
+  <string name="internal_server_error">Internal Server Error</string>
+  <string name="copy_file_ing">Copying file</string>
+  <string name="move_file_ing">Moving file</string>
+  <string name="copy_file_from">Copying from %1$s\nTo %2$s</string>
+  <string name="move_file_from">Moving from %1$s\nTo %2$s</string>
+  <string name="copy_folder_ing">Copying folder</string>
+  <string name="move_folder_ing">Moving folder</string>
+  <string name="upload_started">Upload is started</string>
+  <string name="cannot_copy_folder_to_subfolder">You can\'t copy a folder to its subfolder</string>
+  <string name="cannot_move_folder_to_subfolder">You can\'t move a folder to its subfolder</string>
+  <string name="cancel">Cancel</string>
+  <string name="confirm">Confirm</string>
+  <string name="repo_not_found">Couldn\'t find this directory. It may be deleted or encrypted</string>
+  <string name="settings_account">Account</string>
+  <string name="settings_account_info_title">User info</string>
+  <string name="settings_account_info_load_data">loading…</string>
+  <string name="settings_account_space_title">Space used</string>
+  <string name="settings_account_sign_out_title">Sign out</string>
+  <string name="settings_account_sign_out_hint">Click to sign out</string>
+  <string name="settings_account_sign_out_confirm">Do you want to sign out?</string>
+  <string name="security">Security</string>
+
+  <string name="app_security">App-Security</string>
+  <string name="gesture_lock">Gesture Lock</string>
+  <string name="gesture_lock_on">Gesture lock on</string>
+  <string name="gesture_lock_off">Gesture lock off</string>
+  <string name="biometric_auth">Biometric Authentication</string>
+  <string name="biometric_auth_on">Biometric Authentication on</string>
+  <string name="biometric_auth_off">Biometric Authentication off</string>
+  <string name="biometric_auth_no_support">Biometric Authentication is not supported on this device</string>
+  <string name="when_back">When the back button is pressed</string>
+  <string name="when_home">When the app is minimized</string>
+  <string name="when_device_lock">When the device is locked</string>
+
+  <string name="lockscreen_access_pattern_hint">Please draw Gesture Lock Pattern</string>
+  <string name="lockscreen_access_pattern_start">Start to draw</string>
+  <string name="lockscreen_access_pattern_cleared">Pattern cleared</string>
+  <string name="lockscreen_access_pattern_cell_added">Pattern cell added</string>
+  <string name="lockscreen_access_pattern_detected">Pattern detected</string>
+  <string name="lockscreen_access_pattern_passwd_forget">Forgot password</string>
+  <string name="lockscreen_access_pattern_failure">Failed 5 times, please wait 30 seconds before trying again</string>
+  <plurals name="lockscreen_access_pattern_failure_left_try_seconds">
+    <item quantity="one">You can retry %1$d second later</item>
+    <item quantity="other">You can retry %1$d seconds later</item>
+  </plurals>
+  <plurals name="lockscreen_access_pattern_failure_left_try_times">
+    <item quantity="one">Incorrect pattern, you can try another %1$d time</item>
+    <item quantity="other">Incorrect pattern, you can try another %1$d times</item>
+  </plurals>
+  <string name="lockscreen_access_pattern_failure_not_long_enough">Linking points not long enough, pelase try again</string>
+  <string name="lockpattern_retry_button_text">Retry</string>
+  <string name="lockpattern_continue_button_text">Next</string>
+  <string name="lockpattern_confirm_button_text">OK</string>
+  <string name="lockpattern_recording_intro_header">Please draw Gesture Lock Pattern</string>
+  <string name="lockpattern_settings_help_how_to_record">Learn how to draw Gesture Lock Pattern</string>
+  <string name="lockpattern_recording_incorrect_too_short">Swipe across at least 4 points, try again!</string>
+  <string name="lockpattern_pattern_entered_header">Pattern saved</string>
+  <string name="lockpattern_need_to_draw">Please draw Gesture Lock pattern</string>
+  <string name="lockpattern_need_to_confirm">Please confirm your pattern</string>
+  <string name="lockpattern_need_to_unlock_wrong">Pattern didn\'t match. Try again.</string>
+  <string name="lockpattern_pattern_confirmed_header">Tap OK to save your pattern</string>
+  <string name="lockpattern_recording_inprogress">Release finger when finished drawing</string>
+  <string name="lockpattern_pattern_toast_saved">Gesture Lock Pattern successfully saved</string>
+  <!--Strings for possible PreferenceActivity Back/Next buttons-->
+  <string name="back_button_label">Back</string>
+  <string name="next_button_label">Next</string>
+  <!--Optional button to Skip a PreferenceActivity [CHAR LIMIT=20]-->
+  <string name="skip_button_label">Skip</string>
+  <!--contacts  upload-->
+  <string name="settings_contacts_upload_info_title">Contacts backup</string>
+  <string name="settings_contacts_upload_turn_on">Enable contacts backup</string>
+  <string name="settings_contacts_upload_service_started">Contacts backup enabled</string>
+  <string name="settings_contacts_upload_service_stopped">Contacts backup disabled</string>
+  <string name="settings_contacts_upload_repo_hint">Please select a directory for contacts backup</string>
+  <string name="settings_contacts_upload_change_repo_title">Change the directory for contacts backup</string>
+  <string name="settings_contacts_upload_repo_time">Last backup time</string>
+  <string name="settings_contacts_upload_repo_history">No backup record</string>
+  <string name="settings_contacts_upload_start_backup">Backup</string>
+  <string name="settings_contacts_upload_start_backup_hint">Click to start contacts backup</string>
+  <!--Camera Upload Preference-->
+  <string name="settings_camera_upload_info_title">Camera Photo Upload</string>
+  <string name="settings_camera_upload_service_started">Upload service started</string>
+  <string name="settings_camera_upload_service_stopped">Upload service stopped</string>
+  <string name="settings_camera_upload_allow_data_plan">Allow Data Plan</string>
+  <string name="settings_camera_upload_allow_videos">Allow Videos to Upload</string>
+  <string name="settings_camera_upload_default_wifi">Use Wi-Fi only by default</string>
+  <string name="settings_camera_upload_data_plan_allowed">Data plan allowed</string>
+  <string name="settings_camera_upload_default_photos">Upload photos only by default</string>
+  <string name="settings_camera_upload_videos_allowed">Videos included</string>
+  <string name="settings_camera_upload_change_repo_title">Change Upload directory</string>
+  <string name="settings_camera_upload_repo_hint">Please choose a directory first</string>
+  <string name="settings_camera_upload_turn_on">Turn on Camera Upload</string>
+  <string name="settings_camera_upload_choose_dir">Change albums</string>
+  <string name="settings_camera_upload_dir_auto_scan">Auto scan photos by default</string>
+  <string name="settings_camera_upload_lib_not_found">The selected directory does not exist</string>
+  <string name="settings_camera_upload_advanced_feature_title">Advanced Options</string>
+  <string name="settings_camera_upload_advanced_feature_subtitle">Custom upload options</string>
+  <string name="settings_camera_upload_advanced_custom_directories">Custom Upload Albums</string>
+  <string name="settings_camera_upload_advanced_custom_directories_on">Pick photo albums</string>
+  <string name="settings_camera_upload_advanced_custom_directories_off">Auto scan device</string>
+  <!--Camera Upload Configuration View-->
+  <string name="settings_cuc_title">Configuration Helper</string>
+  <string name="settings_cuc_welcome_text">Thanks for using the camera upload configuration helper. \nTo help you get started with the camera upload service, you\'ll be guided through a few initial steps.</string>
+  <string name="settings_cuc_welcome_text1">Thanks for using the camera upload configuration helper.</string>
+  <string name="settings_cuc_welcome_text2">To help you get started with the camera upload service, you\'ll be guided through a few initial steps.</string>
+  <string name="settings_cuc_welcome_text_attention">This feature is still in the beta phase and it might not work on all devices correctly.</string>
+  <string name="settings_cuc_network_title">How to upload</string>
+  <string name="settings_cuc_network_wifi">Wi-Fi only</string>
+  <string name="settings_cuc_network_data_plan">Wi-Fi or data plan</string>
+  <string name="settings_cuc_option_hint">Choose your preferred option. \nYou can change these options later in Settings.</string>
+  <string name="settings_cuc_type_title">What to upload</string>
+  <string name="settings_cuc_type_photo">Photos only</string>
+  <string name="settings_cuc_type_video">Photos and videos</string>
+  <string name="settings_cuc_local_dir_title">Select albums</string>
+  <plurals name="settings_cuc_local_dir_items">
+    <item quantity="one">%1$d item</item>
+    <item quantity="other">%1$d items</item>
+  </plurals>
+  <string name="settings_cuc_remote_lib_title">Select Remote directory</string>
+  <string name="settings_cuc_remote_lib_account">Choose an account</string>
+  <string name="settings_cuc_remote_lib_repo">%s was selected</string>
+  <string name="settings_cuc_upload_to_parent_folder">Up to Parent Folder</string>
+  <string name="settings_cuc_auto_scan">Automatically guess camera albums</string>
+  <string name="settings_cuc_pick_albums">Let me pick my photo albums</string>
+  <string name="settings_cuc_remote_lib_hint">Choose your preferred account and directory. \nYou can change these options later in the Settings.</string>
+  <string name="settings_cuc_finish_title">Finish</string>
+  <string name="settings_cuc_ready">luckycloud will begin uploading files from your selected folders after you confirm below.\nFeel free to close the app during this process.</string>
+  <string name="luckycloud_settings_cuc_ready">luckycloud will begin uploading files from your selected folders after you confirm below.\nFeel free to close the app during this process.</string>
+  <string name="settings_cuc_swipe_left">Swipe left to continue.</string>
+  <string name="settings_cuc_click_btn">Click to close the configuration helper.</string>
+  <string name="settings_cuc_loading">loading…</string>
+  <!--Camera Sync-->
+  <string name="sync_provider_camera_upload">Camera photos and videos</string>
+  <string name="camera_sync_notification_title_failed">Camera upload failed</string>
+  <string name="camera_sync_notification_repo_missing_failed">Server repository is missing.</string>
+  <string name="camera_sync_notification_auth_error_failed">Authentication error.</string>
+  <string name="camera_sync_rename_file">%s (renamed by luckycloud)</string>
+  <string name="luckycloud_camera_sync_rename_file">%s (renamed by luckycloud)</string>
+  <string name="settings_about_title">ABOUT</string>
+  <string name="settings_upload_log">Upload log</string>
+  <string name="settings_upload_log_desc">Click here to upload the log</string>
+  <string name="settings_about_version_title">App Version</string>
+  <string name="settings_about_author_title">About the author</string>
+  <string name="settings_about_author_info">
+        <![CDATA[
+        <h5>luckycloud Android Client</h5>
+        <p>%s</p>
+        <h5>Contact Us</h5>
+        <p>
+            Twitter: luckycloud<br>
+            Email: support@luckycloud.de<br>
+        </p>
+        <h5>Contributions</h5>
+        <h5>Copyright ©2020-2025 luckycloud GmbH</h5>
+        ]]>
+    </string>
+
+  <string name="luckycloud_settings_about_author_info">
+    <![CDATA[
+    <h5>luckycloud Android Client</h5>
+    <p>%s</p>
+    <br>
+    Based on seadroid
+    https://github.com/haiwen/seadroid
+    <br>
+    <h5>Licenses</h5>
+    https://github.com/haiwen/seadroid/blob/master/LICENSE.md
+    https://github.com/haiwen/seadroid/blob/master/THIRD_PARTY_LICENSE.md
+    ]]>
+  </string>
+  <string name="settings_advance_feature_title">ADVANCED FEATURES</string>
+  <string name="settings_storage_title">CACHE STORAGE</string>
+  <string name="settings_cache_title">Cache size</string>
+  <string name="settings_clear_cache_title">Clear cache</string>
+  <string name="settings_clear_cache_hint">Do you want to clear cache?</string>
+  <string name="settings_clear_cache_success">Cache cleared successfully</string>
+  <string name="settings_clear_cache_failed">Cache cleared failed</string>
+  <string name="settings_cache_empty">0 KB</string>
+  <string name="settings_cache_location_title">Cache storage location</string>
+  <string name="delete_cache_automatic">Delete cache automatic</string>
+  <string name="set_maximum_size_for_cache">Set maximum size for cache</string>
+  <string name="dialog_switch_storage_info_text">Existing files will be moved to the new storage. This might take a while.</string>
+  <string name="storage_manager_primary_storage">Primary storage</string>
+  <string name="storage_manager_secondary_storage">Secondary storage</string>
+  <string name="storage_manager_storage_description">%1$s (%2$s free/%3$s total)</string>
+  <string name="storage_manager_storage_description_not_available">%1$s (unavailable)</string>
+  <!--pull to refresh-->
+  <string name="pull_to_refresh_pull_label">Pull to refresh…</string>
+  <string name="pull_to_refresh_release_label">Release to refresh…</string>
+  <string name="pull_to_refresh_refreshing_label">Loading…</string>
+  <string name="pull_to_refresh_last_update">Last update: </string>
+  <string name="pull_to_refresh_last_update_seconds_ago">%d seconds ago</string>
+  <string name="pull_to_refresh_last_update_minutes_ago">%d minutes ago</string>
+  <string name="pull_to_refresh_last_update_hours_ago">%d hours ago</string>
+  <!--storage access framework-->
+  <string name="saf_open_file_exception">Couldn\'t open file %s.</string>
+  <string name="saf_open_directory_exception">Can\`t open directory.</string>
+  <string name="saf_file_not_cached_exception">File %s not cached.</string>
+  <string name="saf_thumbnail_not_found_exception">Couldn\'t find/open thumbnail %s.</string>
+  <string name="saf_file_not_downloaded_exception">Couldn\'t download file %s from server.</string>
+  <string name="saf_write_diretory_exception">Can\`t open directory for reading/writing.</string>
+  <string name="saf_account_not_found_exception">Couldn\'t find luckycloud account.</string>
+  <string name="saf_upload_path_not_available">Unable to upload, no path available</string>
+  <string name="saf_failed_to_create_directory">Could not create directory %s</string>
+  <string name="saf_file_exist">That file already exists</string>
+  <string name="saf_bad_mime_type">Bad request type</string>
+  <!--Single Sign-On  SSO-->
+  <string name="shib_server_url_empty">Server is empty!</string>
+  <string name="shib_server_incorrect_prefix">Server needs to start with https://</string>
+  <string name="shib_load_page_error">Error: </string>
+  <string name="shib_login_title">Single Sign-On</string>
+  <string name="shib_loading">loading…</string>
+  <!--Transfer List-->
+  <string name="transfer_list_network_error">Network connection error, please try again later!</string>
+  <string name="transfer_list_cancel_all">Cancel all tasks</string>
+  <string name="transfer_list_restart_all">Restart</string>
+  <string name="transfer_list_retry_failed_tasks">Retry failed tasks</string>
+  <string name="transfer_list_restart_cancelled_tasks">Restart cancelled tasks</string>
+  <string name="transfer_list_clear_failed_tasks">Clear failed tasks</string>
+  <string name="transfer_list_clear_all_tasks">Clear all tasks</string>
+  <string name="transfer_list_clear_finished_tasks">Clear finished tasks</string>
+  <string name="transfer_tabs_downloads">Download List</string>
+  <string name="transfer_tabs_uploads">Upload List</string>
+  <string name="transfer_download_no_task">All files have been downloaded</string>
+  <plurals name="transfer_download_started">
+    <item quantity="one">Starting to download %1$d file</item>
+    <item quantity="other">Starting to download %1$d files</item>
+  </plurals>
+  <string name="transfer_list_select_all">Select all</string>
+  <string name="transfer_list_deselect_all">Deselect all</string>
+  <plurals name="transfer_list_items_selected">
+    <item quantity="one">%d item selected</item>
+    <item quantity="other">%d items selected</item>
+  </plurals>
+  <!--Sort-->
+  <string name="sort_menu_item">Sort</string>
+  <string name="sort_files">Sort By</string>
+  <string-array name="sort_files_options_array">
+    <item>Name</item>
+    <item>Name (Desc)</item>
+    <item>Last Modified Time</item>
+    <item>Last Modified Time (Desc)</item>
+  </string-array>
+  <!--Search-->
+  <string name="search_menu_item">Search</string>
+  <string name="search_bar_hint">Searching…</string>
+  <string name="search_txt_empty">Please input keywords</string>
+  <string name="search_content_empty">Nothing was found</string>
+  <string name="search_server_not_support">Oops, search was not supported on this server!</string>
+  <string name="search_library_not_found">Couldn\'t find this directory. It may be deleted</string>
+  <!--star a file-->
+  <string name="star_file_succeed">File starred successfully</string>
+  <string name="star_file_failed">File starred failed</string>
+  <!--unstar a file-->
+  <string name="unstar_file_failed">Unstarring the file failed</string>
+  <string name="unstar">Unstar</string>
+  <!--notification bar-->
+  <string name="notification_upload_started_title">Uploading files…</string>
+  <string name="notification_download_started_title">Downloading files…</string>
+  <string name="notification_upload_completed">Upload completed</string>
+  <plurals name="notification_upload_info">
+    <item quantity="one">Uploading %1$d file (%2$d%%)</item>
+    <item quantity="other">Uploading %1$d files (%2$d%%)</item>
+  </plurals>
+  <plurals name="notification_download_info">
+    <item quantity="one">Downloading %1$d file (%2$d%%)</item>
+    <item quantity="other">Downloading %1$d files (%2$d%%)</item>
+  </plurals>
+  <string name="notification_download_completed">Download completed</string>
+  <!--Gallery-->
+  <string name="gallery_load_photos_error">Load photos error</string>
+  <string name="gallery_encrypted_repo_not_supported">Encrypted directory was not supported</string>
+  <!--Overwrite existing files-->
+  <string name="overwrite_existing_file_title">Replace existing file</string>
+  <string name="overwrite_existing_file_msg">The file already exists, do you want to replace it?</string>
+  <string name="overwrite_existing_file_exist">The file already exists</string>
+  <!--Action Mode-->
+  <string name="action_mode_no_items_selected">No items were selected</string>
+  <!--Accessibility description for navigation drawer-->
+  <string name="navdrawer_description_a11y" translatable="false">Navigation Drawer used to switch between major features of the application</string>
+  <!--permission-->
+  <string name="permission_read_exteral_storage_rationale">To process files, allow storage permission to access them.</string>
+  <string name="permission_read_contacts_storage_rationale">To process contacts, allow contacts permission to access them.</string>
+  <string name="permission_not_granted">Permission was not granted</string>
+  <string name="history_change_title">Modification Details</string>
+  <string name="no_more_activities">No more activities</string>
+  <!--client side encryption and decryption-->
+  <string name="enc_on">Decrypt data locally</string>
+  <string name="enc_off">Decrypt data on server side</string>
+  <string name="enc_title">Encrypted directory data decryption mode</string>
+  <!--clear password-->
+  <string name="clear_password_title">Clear directory password</string>
+  <string name="clear_password_hint">Click to clear password</string>
+  <string name="clear_password_successful">Clear password successful</string>
+  <string name="clear_password_failed">Clear password failed</string>
+  <string name="clear_password_warning">Do you want to clear password?</string>
+  <string name="clear_password_auto">Auto clear passwords</string>
+  <!--Two factor auth-->
+  <string name="two_factor_auth_error">authentication token is required</string>
+  <string name="two_factor_auth_invalid">authentication token is invalid</string>
+  <string name="two_factor_auth_token">Two-factor Authentication token</string>
+  <string name="two_factor_auth_token_empty">Authentication token can\`t be empty</string>
+  <string name="two_factor_auth_remember_phone">Remember that device</string>
+  <!--Operation Exceptions-->
+  <string name="op_exception_folder_deleted">The folder \"%s\" was deleted</string>
+  <string name="op_exception_suitable_app_not_found">Could not find suitable app for mime type %s</string>
+  <string name="op_exception_failed_to_download_file">Failed to download file %s</string>
+  <!--Home list title-->
+  <string name="shared_with_all">Shared with all</string>
+  <string name="add_password_protection">Add password protection</string>
+  <string name="expiration_dates">expiration dates</string>
+  <string name="luckycloud_expiration_dates">expiration dates</string>
+  <string name="add_auto_expiration">Add time limitation</string>
+  <string name="luckycloud_add_auto_expiration">Add time limitation</string>
+  <string name="input_auto_expiration">Please enter the expiration dates</string>
+  <!--editor-->
+  <string name="editor_lines_error">Unable to operate multiple lines</string>
+  <string name="editor_file_save">Do you want to save and quit?</string>
+  <string name="editor_file_save_success">File save successfully</string>
+  <string name="editor_file_save_failed">Cache cleared failed</string>
+  <string name="editor_file_save_title">File save</string>
+  <string name="description">Description</string>
+  <string name="undo">undo</string>
+  <string name="redo">redo</string>
+  <string name="link">Link</string>
+  <string name="channel_name_error">Error Alerts</string>
+  <string name="channel_name_upload">File Uploading Info</string>
+  <string name="channel_name_download">File Downloading Info</string>
+
+  <string name="above_quota">Above Quota</string>
+  <string name="camera_upload_state">Upload Info</string>
+  <string name="waiting_state">Upload waiting</string>
+  <string name="Upload_completed">Last sync finished at</string>
+
+  <string name="is_scanning">Scanning</string>
+  <string name="is_uploading">Uploading</string>
+  <string name="network_unavailable">Network unavailable</string>
+  <string name="demo_account_warning">This account is for testing and evaluation purposes only.\n\nNo personal documents or sensitive data may be uploaded. The data of this demo account will be removed regularly.</string>
+
+  <string name="required_password">Password is required.</string>
+  <string name="weak_password">Password is too weak.</string>
+
+  <!--new-->
+  <string name="favorites">Favorites</string>
+  <string name="enterprise_login">Enterprise-Login?</string>
+  <string name="enter_2fa_token">Please enter your 2FA-Token</string>
+  <string name="account">Account</string>
+  <string name="my">My</string>
+  <string name="new_library">New directory</string>
+  <string name="create">Create</string>
+  <string name="encrypted">Encrypted</string>
+  <string name="logout">Logout</string>
+  <string name="email">E-Mail</string>
+  <string name="from">from</string>
+  <string name="password_from_library">Password From directory</string>
+  <string name="cuc_how_to_upload_title">Which network should be used for upload?</string>
+  <string name="cuc_how_to_upload_detail">Choose what you prefer, you can change it \nin the settings at any time.</string>
+  <string name="cuc_how_to_upload_first_radio">Wifi only</string>
+  <string name="cuc_how_to_upload_second_radio">Wifi or mobile network</string>
+  <string name="cuc_what_to_upload_title">What should be uploaded?</string>
+  <string name="cuc_what_to_upload_first_radio">Only pictures</string>
+  <string name="cuc_what_to_upload_second_radio">Pictures and videos</string>
+  <string name="cuc_local_directory_first_radio">Choose photo folders automatically</string>
+  <string name="cuc_local_directory_second_radio">Select albums to upload your self</string>
+  <string name="cuc_ready_to_scan_title">Finished</string>
+  <string name="cuc_ready_to_scan_detail">luckycloud will now upload the files from the \nselected folders. \nYou can close the app and the setup wizard.</string>
+  <string name="continue_text">Continue</string>
+  <string name="back_overview">Back to the overview</string>
+  <string name="select_library">Please select a directory.</string>
+  <string name="wait_uploading">Wait for uploading...</string>
+  <string name="wait_downloading">Wait for downloading...</string>
+  <string name="uploading">Uploading...</string>
+  <string name="downloading">Downloading...</string>
+  <string name="file_uploaded">File uploaded</string>
+  <string name="file_downloaded">File downloaded</string>
+  <string name="search">Search</string>
+  <string name="data_privacy">Data Privacy</string>
+  <string name="data_privacy_url">https://luckycloud.de/de/data-and-privacy</string>
+  <string name="rename">Rename</string>
+  <string name="copy">Copy</string>
+  <string name="move">Move</string>
+  <string name="add_favourites">Add to favourites</string>
+  <string name="force_dark_mode">Force dark mode</string>
+  <string name="force_light_mode">Force light mode</string>
+  <string name="settings_dark_light_mode_title">Appearance</string>
+  <string name="create_file">Create file</string>
+  <string name="create_folder">Create folder</string>
+  <string name="upload_file">Upload file</string>
+  <string name="take_photo">Take a photo</string>
+  <string name="file_name">filename:&#160;%1$s</string>
+  <string name="luckycloud_settings_about_author_client">luckycloud Android Client</string>
+  <string name="luckycloud_settings_about_author_client_url">Based on seadroid\nhttps://github.com/haiwen/seadroid</string>
+  <string name="luckycloud_settings_about_author_licenses">Licenses</string>
+  <string name="luckycloud_settings_about_author_licenses_url">https://github.com/haiwen/seadroid/blob/master/LICENSE.md\nhttps://github.com/haiwen/seadroid/blob/master/THIRD_PARTY_LICENSE.md</string>
+  <string name="play">Play</string>
+  <string name="download_link">Download-Link</string>
+  <string name="upload_link">Upload-Link</string>
+  <string name="internal_link">Internal-Link</string>
+  <string name="share_user">Share to User</string>
+  <string name="share_group">Share to Group</string>
+  <string name="custom_sharing_permission">Custom sharing permission</string>
+  <string name="pwd_confirm_hint">Confirm password</string>
+  <string name="pwd_auto_expiration">Add auto expiration</string>
+  <string name="expiration_days">Expiration days</string>
+  <string name="days">Days</string>
+  <string name="expiration_time">Expiration time</string>
+  <string name="set_permission">Set permission</string>
+  <string name="preview_and_download">Preview and download</string>
+  <string name="preview_only">Preview only</string>
+  <string name="download_and_upload">Download and upload</string>
+  <string name="edit_on_cloud_and_download">Edit on cloud and download</string>
+  <string name="select_user">Select User</string>
+  <string name="add_custom_permission">Add custom permission</string>
+  <string name="shared_to">Shared to</string>
+  <string name="selection_time_later_current">The selection time can not be later that the current time.</string>
+  <string name="link_with_colon">Link:</string>
+  <string name="direct_download_link_with_colon">Direct Download Link:</string>
+  <string name="error_days_empty">Days can not be empty.</string>
+  <string name="error_time_empty">Time can not be empty.</string>
+  <string name="err_passwd_confirm_empty">Confirm password can\`t be empty</string>
+  <string name="password_with_colon">Password:</string>
+  <string name="expiration_date_with_colon">Expiration Date:</string>
+  <string name="permission_with_colon">Permission:</string>
+  <string name="update">Update</string>
+  <string name="add_permission">Add permission</string>
+  <string name="permission_name">Permission Name</string>
+  <string name="modify">Modify</string>
+  <string name="preview_online">Preview Online</string>
+  <string name="generate_share_link">Generate Share-Link</string>
+  <string name="submit">Create</string>
+  <string name="permission_of_custom">Permission (currently only active in the browser)</string>
+  <string name="permission_of_shared">Permission</string>
+  <string name="permission_rw_name">Read-Write</string>
+  <string name="permission_rw_desc">User can read, write, upload, download and sync files.</string>
+  <string name="permission_r_name">Read-Only</string>
+  <string name="permission_r_desc">User can read, download and sync files.</string>
+  <string name="permission_admin_name">Admin</string>
+  <string name="permission_admin_desc">Besides Write permission, user can also share the directory</string>
+  <string name="permission_cloud_edit_name">Online Read-Write</string>
+  <string name="permission_cloud_edit_desc">User can view and edit file online via browser. Files can\'t be downloaded.</string>
+  <string name="permission_preview_name">Online Read-Only</string>
+  <string name="permission_preview_desc">User can only view files online via browser. Files can\'t be downloaded.</string>
+  <string name="select_group">Select Group</string>
+  <string name="group">Group</string>
+  <string name="user">User</string>
+  <string name="err_field_empty">This field can\`t be empty</string>
+  <string name="custom_permission">Custom Permission</string>
+  <string name="what_want">What do you want to do?</string>
+  <string name="back_selection">Back to selection</string>
+  <string name="add_password">Add password</string>
+  <string name="send">Send</string>
+  <string name="today">Today</string>
+  <string name="save">Save</string>
+  <string name="user_selected">%d User selected</string>
+  <string name="users_selected">%d Users selected</string>
+  <string name="group_selected">%d Group selected</string>
+  <string name="groups_selected">%d Groups selected</string>
+  <string name="link_preview">Link preview</string>
+  <string name="direct_download">Direct download</string>
+  <string name="embedded_web_link">Embedded web link</string>
+  <string name="enter_character">Please enter a character to start search</string>
+  <string name="enter_full_email">Please enter a full e-mail address</string>
+  <string name="account_info">Account Info</string>
+  <string name="appearance">Appearance</string>
+  <string name="cache">Cache</string>
+  <string name="cache_and_download">Cache and Download</string>
+  <string name="download_data_location">Download folder</string>
+  <string name="default_text">Default</string>
+  <string name="about">About</string>
+  <string name="home_teams">Home/Teams</string>
+  <string name="business">Business</string>
+  <string name="enterprise">Enterprise</string>
+  <string name="account_edit">Do you really want to %1$s your account?</string>
+  <string name="detail"><u>Detail</u></string>
+  <string name="internal_share">Internal Share</string>
+  <string name="external_share">External Share</string>
+  <string name="switch_account">Switch account</string>
+  <string name="change_view">Change view</string>
+  <string name="list">List</string>
+  <string name="small_tile">Small tile</string>
+  <string name="big_tile">Big tile</string>
+  <string name="tags">Tags</string>
+  <string name="select_color">Select color</string>
+  <string name="tag_name_empty">Please enter the name of the tag</string>
+  <string name="tag_exist">This tag already exist.</string>
+  <string name="tag_color_empty">Please select the color of the tag</string>
+  <string name="new_tag">New tag</string>
+  <string name="select_tags">Select tags</string>
+  <string name="location">Location</string>
+  <string name="search_all_libraries">Search in all libraries</string>
+  <string name="search_current_library">Search only in current directory</string>
+  <string name="search_current_folder">Search only in current folder</string>
+  <string name="all_file_types">All file types</string>
+  <string name="custom_file_types">Custom file types</string>
+  <string name="image">Image</string>
+  <string name="pdf">PDF</string>
+  <string name="video">Video</string>
+  <string name="markdown">Markdown</string>
+  <string name="text">Text</string>
+  <string name="audio">Audio</string>
+  <string name="document">Document</string>
+  <string name="enter_file_extensions">Enter file extensions and separate them with commas</string>
+  <string name="last_changes">Last changes</string>
+  <string name="size">Size</string>
+  <string name="date_format">YYYY\-MM\-DD</string>
+  <string name="select_correct_date">Please select correct dates.</string>
+  <string name="unit_b">B</string>
+  <string name="unit_kb">KB</string>
+  <string name="unit_mb">MB</string>
+  <string name="unit_gb">GB</string>
+  <string name="unit_tb">TB</string>
+  <string name="copying">Copying</string>
+  <string name="moving">Moving</string>
+  <string name="more_activities">More Activities</string>
+  <string name="where_copy_move">Where do you want to %s?</string>
+  <string name="unstar_file_succeed">File unstarred successfully</string>
+  <string name="remove_favourites">Remove from favourites</string>
+  <string name="upload_and_download">Upload and download</string>
+  <string name="library_share_type">View</string>
+  <string name="all_data">All data</string>
+  <string name="play_integrated">Play with integrated Video player</string>
+  <string name="play_vlc">Play with VLC App</string>
+  <string name="create_new_tag">Create a new tag</string>
+  <string name="close">Close</string>
+  <string name="no_activity">No activity yet</string>
+  <string name="no_task">No task yet</string>
+  <string name="open_parent_directory">Open parent directory</string>
+  <string name="create_add_tag">Create tag / add tag</string>
+  <string name="failed_upload">Failed to upload</string>
+  <string name="canceled_upload">Canceled to upload</string>
+  <string name="start_uploading">Start uploading</string>
+  <string name="share_link_no_permission">You do not have permission to perform this action.</string>
+
+  <!--Folder backup Preference-->
+  <string name="settings_folder_backup_welcome_title">Setup wizard</string>
+  <string name="settings_folder_backup_welcome_text1">Thanks for using the backup folder configuration helper.</string>
+  <string name="settings_folder_backup_welcome_text2">To help you get started with the backup folder service, you\'ll be guided through a few initial steps.</string>
+  <string name="settings_folder_backup_how_to_upload_first_radio">Wifi</string>
+  <string name="settings_folder_backup_how_to_upload_second_radio">Wifi and mobile traffic</string>
+
+  <string name="settings_folder_backup_info_title">Backup &amp; Sync</string>
+  <string name="settings_folder_backup_switch_title">Turn on Folder Backup</string>
+  <string name="settings_folder_backup_service_started">Backup service started</string>
+  <string name="settings_folder_backup_service_stopped">Backup service stopped</string>
+  <string name="settings_select_backup_folder_title">Select folder</string>
+  <string name="folder_file_item_size">Size %s</string>
+  <string name="folder_file_item_describe">file \%s\ | folder \%s\</string>
+  <string name="internal_storage">Internal storage</string>
+  <string name="selection_file_type">Please select a backup folder</string>
+  <string name="get_storage_permission_failed">Failed to get storage permission</string>
+  <string name="authorization_storage_permission">Authorization denied permanently, please grant storage permission manually.</string>
+  <string name="settings_folder_backup_select_hint">0</string>
+  <string name="settings_folder_backup_select_title">Selected backup folders</string>
+  <string name="settings_folder_backup_traffic">Backup mode</string>
+  <string name="settings_folder_backup_traffic_hint">WIFI</string>
+  <string name="settings_folder_backup_library">Selected directory</string>
+  <string name="folder_backup_add">Add a backup folder</string>
+  <string name="folder_backup_cancel">Deselect folder</string>
+  <string name="folder_backup_waiting_state">Done</string>
+  <string name="folder_backup_state">Folder backup info</string>
+  <string name="folder_backup_mode">WIFI and mobile traffic</string>
+  <string name="folder_backup_mode_title">Choose a mode</string>
+  <string name="folder_backup_select_repo_hint">Select a directory</string>
+  <string name="folder_backup_select_repo_update">Update backup directory</string>
+  <string name="folder_backup_ready_to_scan_detail">luckycloud will now backup the files from the \nselected folders. \nYou can close the app and the setup wizard.</string>
+  <string name="UncaughtExceptionHandler_err">The application stopped running</string>
+  <string name="download_duplicate_found1">An item named \"%s\" already exist in Download/luckycloud.</string>
+  <string name="download_duplicate_found2">Do you want to replace it with the one you\`re downloading?</string>
+  <string name="added_to_download_tasks">Downloading started</string>
+  <string name="sync_folder">Sync folder</string>
+  <string name="coming_soon">Coming soon</string>
+  <string name="sync_folder_development">This feature is still under development</string>
+  <string name="bottom_bar">Bottom Bar</string>
+  <string name="large">Large</string>
+  <string name="medium">Medium</string>
+  <string name="small">Small</string>
+  <string name="hidden">Hidden</string>
+  <string name="minimal_list">Minimal List</string>
+  <string name="last_backup_done">last backup of %d file done at %s</string>
+  <string name="save_to_cache">Save to cache</string>
+  <string name="start_downloading">Start downloading</string>
+  <string name="downloaded">Downloaded</string>
+  <string name="failed_download">Failed to download</string>
+
+  <string name="backup_started">Backup started</string>
+  <string name="backup_succeed">Backup succeed</string>
+  <string name="backup_failed">Backup failed</string>
+  <string name="backup_canceled">Backup canceled</string>
+
+  <string name="convert_to_pdf">Convert to pdf</string>
+
+  <string name="toast_cannot_retrieve_selected_image">Cannot retrieve selected image</string>
+  <string name="toast_cannot_retrieve_cropped_image">Cannot retrieve cropped image</string>
+
+  <string name="document_scanner">Document scanner</string>
+  <string name="error_scan_failed">Failed to scan: %1$s</string>
+  <string name="error_scanner_cancelled" translatable="false">Scanner is cancelled.</string>
+
+  <string name="file">File</string>
+  <string name="word">Word</string>
+  <string name="excel">Excel</string>
+  <string name="powerpoint">PowerPoint</string>
+
+  <string name="detect_text">Enable text recognition?</string>
+  <string name="will_use_ocr">Allows automatic detection and searching of text in PDFs.</string>
+  <string name="ocr_settings">How should text recognition be used by default?\nAsk: Decide each time\nEnabled: Always enable automatically\nDisabled: Always disable automatically\n\nNote: This setting can be changed at any time in the app settings.</string>
+  <string name="ocr_open_settings">Open settings</string>
+  <string name="detecting_text">Detecting text %1$d%%…</string>
+  <string name="converting_pdf">Converting to PDF…</string>
+  <string name="page_text">Page %1$d</string>
+
+  <string name="advanced_options">Advanced options</string>
+  <string name="no_directories">No directories</string>
+  <string name="no_directories_desc">You have not created any libraries yet. A Directory is a container to organize your files and folders. A Directory can also be shared with others and synced to your connected devices. You can create a Directory by clicking the "New Directory" button in the menu bar.</string>
+  <string name="no_shared_directories">No shared directories</string>
+  <string name="no_shared_directories_desc">No libraries have been shared directly with you. A shared directory can be shared with full or restricted permission. If you need access to a library owned by another user, ask the user to share the directory with you.</string>
+  <string name="no_groups">No groups</string>
+  <string name="no_groups_desc">You are not in any groups. Groups allow multiple people to collaborate on libraries.</string>
+  <string name="no_options">No options</string>
+  <string name="no_options_desc">No options are active. You can activate the option by clicking on the three buttons in the top left corner of the screen.</string>
+
+  <string name="file_not_exist">File does not exist.</string>
+  <string name="execute_ocr">Execute\nOCR</string>
+  <string name="ask_everytime">ask everytime</string>
+  <string name="activated">activated</string>
+  <string name="deactivated">deactivated</string>
+
+  <string name="from_to">from %1$s to %2$s</string>
+  <string name="creating_log_library">Creating %s library…</string>
+  <string name="failed_create_log_library">Failed to create %s library…</string>
+  <string name="creating_log_folder">Creating %s folder…</string>
+  <string name="failed_create_log_folder">Failed to create log folder…</string>
+  <string name="loading_repo_dirent">Loading %s…</string>
+  <string name="getting_download_link">Getting download link of %s…</string>
+  <string name="creating_download_link">Creating download link of %s…</string>
+  <string name="failed_create_download_link">Failed to create download link of %s…</string>
+
+  <string name="date_string">Date</string>
+  <string name="path">Path</string>
+  <string name="start_time">Start Time:</string>
+  <string name="end_time">End Time:</string>
+
+  <string name="folder_backup_reset">Force Upload folder backup</string>
+
+  <string name="uploading_log">Uploading log files…</string>
+
+  <string name="exception_enc_repo">Exception for encrypted directories</string>
+  <string name="using_enc_repo">You are using encrypted directories in the camera upload / folder backup.</string>
+  <string name="make_exception_used_encrypted_repo">Would you like to make an exception for the used encrypted directories?</string>
+  <string name="can_use_enc_repo">You can use encrypted directories in the camera upload / folder backup.</string>
+  <string name="make_exception_will_use_encrypted_repo">Would you like to make an exception for the encrypted directories you will use?</string>
+
+  <string name="thumb_in_enc_repo">Thumbnails in encrypted directories (Beta)</string>
+  <string name="thumb_in_enc_repo_detail">Activate create thumbnails in encrypted directories</string>
+  <string name="save_files_in_cache">Save files in cache</string>
+  <string name="save_files_in_cache_detail">Save all files in Cache after thumbnails created</string>
+  <string name="network_mode">Network mode</string>
+  <string name="status">Status</string>
+  <string name="thumbnails_created">%1$d / %2$d thumbnails created</string>
+  <string name="thumbnails_calculating">Please wait a moment, calculating...</string>
+
+  <string name="phone">Phone</string>
+  <string name="sdcard">SDCard</string>
+  <string name="usb">USB</string>
+
+  <string name="select">Select</string>
+
+  <string name="failed_parse_markdown">Failed to parse markdown. File may contain unsupported formatting.</string>
+
+  <string name="onlyoffice_app">Onlyoffice App</string>
+  <string name="in_app_office">In App Office</string>
+  <string name="external_app">External App</string>
+  <string name="optional">Optional</string>
+  <string name="open_office_with">Open Office\nfiles with</string>
+  <string name="select_default_action">Select default action</string>
+  <string name="can_change_later_description_office">- Optional: Decide each time\nOnlyOffice: Open with OnlyOffice App\n- In App Office: Display directly in the luckycloud app\n- External App: Open with another app on the device</string>
+  <string name="can_change_later_hint_office">Note:\nThe selection can be changed later at any time in the settings (advanced options).</string>
+  <string name="no_app_to_open">There is no app that can open this file.</string>
+
+  <string name="pdf_dialog_title">How do you want to open the file?</string>
+  <string name="open_pdf_with">Open PDF\nfiles with</string>
+  <string name="in_app_pdf">In App PDF</string>
+  <string name="can_change_later_description_pdf">- Optional: Decide each time\nIn app PDF: Display directly in the luckycloud app\n- External app: Open with another app on the device</string>
+  <string name="can_change_later_hint_pdf">Note:\nThe selection can be changed later at any time in the settings (advanced options).</string>
+
+  <!--PDF Viewer-->
+  <string name="zoom_limit">Zoom Limit</string>
+  <string name="scroll_speed_limit">%s scroll speed limit</string>
+  <string name="enable">Enable</string>
+  <string name="disable">Disable</string>
+  <string name="share_pdf_using">Share PDF using</string>
+  <string name="unable_share_pdf">Unable to share pdf!</string>
+  <string name="unable_open_pdf_other">Unable to open pdf with other apps!</string>
+  <string name="zoom_auto">Zoom (Auto)</string>
+  <string name="zoom_page_fit">Zoom (Page Fit)</string>
+  <string name="zoom_page_width">Zoom (Page Width)</string>
+  <string name="zoom_actual_size">Zoom (Actual Size)</string>
+  <string name="zoom_percent">Zoom (%d%%)</string>
+  <string name="go_to_page">Go to page</string>
+  <string name="rotate_clockwise">Rotate Clockwise</string>
+  <string name="rotate_anti_clockwise">Rotate Anti Clockwise</string>
+  <string name="scroll_mode">Scroll Mode</string>
+  <string name="single_page_arrangement">Single Page Arrangement</string>
+  <string name="split_mode">Split Mode</string>
+  <string name="align_mode">Align Mode</string>
+  <string name="snap_page">Snap Page</string>
+  <string name="properties">Properties</string>
+  <string name="page_number">Page number</string>
+  <string name="go">Go</string>
+  <string name="done">Done</string>
+  <string name="pdf_file_name">File name</string>
+  <string name="pdf_file_size">File size</string>
+  <string name="title">Title</string>
+  <string name="subject">Subject</string>
+  <string name="author">Author</string>
+  <string name="creator">Creator</string>
+  <string name="producer">Producer</string>
+  <string name="creation_date">Creation Date</string>
+  <string name="modified_date">Modified Date</string>
+  <string name="keywords">Keywords</string>
+  <string name="language">Language</string>
+  <string name="pdf_version">Pdf Version</string>
+  <string name="fast_webview">Fast Webview</string>
+  <string name="document_properties">Document Properties</string>
+  <string name="properties_not_loaded">Properties not loaded yet!</string>
+  <string name="print">Print</string>
+  <string name="thickness">Thickness</string>
+  <string name="highlight_color">Highlight Color</string>
+  <string name="opacity">Opacity</string>
+  <string name="custom">Custom</string>
+  <string name="presets">Presets</string>
+  <string name="font_size">Font Size</string>
+  <string name="file_updated">File updated</string>
+  <string name="cannot_add_change_in_read_only">You cannot add / change files because this is read only</string>
+  <string name="select_page_scroll_mode">Select Page Scroll Mode</string>
+  <string name="vertical">Vertical</string>
+  <string name="horizontal">Horizontal</string>
+  <string name="wrapped">Wrapped</string>
+  <string name="single_page">Single Page</string>
+  <string name="select_page_split_mode">Select Page Split Mode</string>
+  <string name="none">None</string>
+  <string name="odd">Odd</string>
+  <string name="even">Even</string>
+  <string name="select_page_align_mode">Select Page Align Mode</string>
+  <string name="center_vertically">Center Vertically</string>
+  <string name="center_horizontally">Center Horizontally</string>
+  <string name="center_both">Center Both</string>
+  <string name="find">Find...</string>
+  <string name="highlight">Highlight</string>
+  <string name="draw">Draw</string>
+  <string name="add_edit_images">Add/Edit Images</string>
+  <string name="show_all">Show All</string>
+  <string name="print_document">Print Document</string>
+  <string name="select_zoom_level">Select Zoom Level</string>
+  <string name="automatic">Automatic</string>
+  <string name="page_fit">Page Fit</string>
+  <string name="page_width">Page Width</string>
+  <string name="actual_size">Actual Size</string>
+
+  <string name="file_saving">Please wait a moment, %s is being saved.</string>
+  <string name="save_change">Do you want to save changes?</string>
+  <string name="updating">%s is updating...</string>
+
+  <string name="delete_lines">Delete lines</string>
+  <string name="duplicate_lines">Duplicate lines</string>
+  <string name="start_new_line_below">Start new line</string>
+  <string name="move_text_one_line_up">Move line up</string>
+  <string name="move_text_one_line_down">Move line down</string>
+  <string name="jump_to_bottom">Jump to bottom</string>
+  <string name="check_list">Check list</string>
+  <string name="unordered_list">Unordered list</string>
+  <string name="ordered_list">Ordered list</string>
+  <string name="bold">Bold</string>
+  <string name="italic">Italic</string>
+  <string name="strikeout">Strike out</string>
+  <string name="inline_code">Inline code</string>
+  <string name="quote">Quote</string>
+  <string name="heading_1">Heading 1</string>
+  <string name="heading_2">Heading 2</string>
+  <string name="heading_3">Heading 3</string>
+  <string name="horizontal_line">Horizontal line</string>
+  <string name="indent">Indent</string>
+  <string name="deindent">De-indent</string>
+  <string name="view">View</string>
+  <string name="view_mode">View mode</string>
+  <string name="edit_mode">Edit mode</string>
+  <string name="wrap_words">Wrap words\u00A0</string>
+  <string name="line_numbers">Line numbers\u00A0</string>
+  <string name="syntax_highlighting">Syntax highlighting\u00A0</string>
+  <string name="table_of_contents">Table of contents</string>
+
+  <string name="not_found_backup_repo">Folder backup deactivated, because library: %s not found.</string>
+</resources>

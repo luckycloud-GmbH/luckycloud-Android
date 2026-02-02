@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/cuc_multi_selection_up_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/cuc_multi_selection_up_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:paddingStart="10dp"
+            android:src="@drawable/up" />
+
+        <TextView
+            android:id="@+id/cuc_multi_selection_up_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/cuc_multi_selection_up_icon"
+            android:text="@string/settings_cuc_upload_to_parent_folder"
+            android:textColor="@color/text_view_secondary_color"
+            android:textSize="@dimen/subtitle_txt_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cuc_multi_selection_up_layout"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cuc_multi_selection_current_directory_txt"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/choose_a_library"
+            android:textSize="@dimen/subtitle_txt_size"
+            android:textAlignment="center"
+            android:textColor="@color/text_view_secondary_color" />
+
+        <ImageView
+            android:id="@+id/cuc_multi_selection_refresh_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/refresh"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/refresh_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cuc_multi_selection_error_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/title_txt_size"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/cuc_multi_selection_empty_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <LinearLayout android:id="@+id/cuc_multi_selection_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/lv_divider_inset"/>
+
+            <ListView
+                android:id="@+id/cuc_multi_selection_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/lv_divider_inset"
+                android:dividerHeight="0dp"
+                android:drawSelectorOnTop="true"
+                android:scrollbars="none"
+                android:scrollbarSize="0dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/lv_divider_inset" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cuc_multi_selection_progress_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <ProgressBar
+                style="@style/loading"
+                android:layout_width="@dimen/normal_progress_logo_width"
+                android:layout_height="@dimen/normal_progress_logo_width"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/settings_cuc_loading"
+                android:paddingTop="4dip"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

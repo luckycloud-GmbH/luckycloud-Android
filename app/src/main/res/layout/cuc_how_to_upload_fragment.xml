@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/cuc_wifi_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/tv_title_margin_left"
+        android:layout_marginVertical="@dimen/tv_title_margin_top"
+        android:text="@string/cuc_how_to_upload_title"
+        android:textAlignment="center"
+        android:textColor="@color/luckycloud_green"
+        android:textSize="@dimen/subtopic_txt_size"
+        android:lineSpacingMultiplier="@dimen/line_spacing_multiplier"/>
+
+    <TextView
+        android:id="@+id/cuc_wifi_hint_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cuc_wifi_title_tv"
+        android:layout_alignStart="@+id/cuc_wifi_title_tv"
+        android:layout_marginTop="@dimen/section_margin_top"
+        android:layout_marginEnd="30dp"
+        android:text="@string/cuc_how_to_upload_detail"
+        android:textAlignment="center"
+        android:textColor="@color/text_view_secondary_color"
+        android:textSize="@dimen/subtitle_txt_size"
+        android:lineSpacingMultiplier="@dimen/line_spacing_multiplier"/>
+
+    <RadioGroup
+        android:id="@+id/cuc_wifi_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/cuc_wifi_only_rb"
+        android:layout_alignStart="@+id/cuc_wifi_hint_tv"
+        android:layout_below="@+id/cuc_wifi_hint_tv"
+        android:layout_marginTop="@dimen/section_margin_top" >
+
+        <RadioButton
+            android:id="@+id/cuc_wifi_only_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/radio_click_effect_margin"
+            android:layout_marginBottom="@dimen/tv_subtitle_margin_top"
+            android:paddingStart="@dimen/radio_text_padding"
+            android:button="@drawable/rounded_checkbox2"
+            android:text="@string/cuc_how_to_upload_first_radio"
+            android:textColor="@color/text_view_color"/>
+
+        <RadioButton
+            android:id="@+id/cuc_wifi_or_data_plan_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/radio_click_effect_margin"
+            android:paddingStart="@dimen/radio_text_padding"
+            android:button="@drawable/rounded_checkbox2"
+            android:text="@string/cuc_how_to_upload_second_radio"
+            android:textColor="@color/text_view_color"/>
+        
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cuc_wifi_radio_group"
+        android:layout_marginTop="0dp"
+        android:paddingVertical="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wifi"
+            app:tint="@color/text_view_color"/>
+
+        <ImageView
+            android:id="@+id/wifi_mobile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_mobile_network"
+            app:tint="@color/text_view_color"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</RelativeLayout>

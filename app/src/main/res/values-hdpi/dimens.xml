@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- library fragment -->
+    <dimen name="repo_item_small_icon_width">12dp</dimen>
+    <dimen name="repo_item_small_text_width">6sp</dimen>
+
+    <!--account detail-->
+    <dimen name="account_detail_otp_width">32dp</dimen>
+
+    <!-- accounts fragment -->
+    <dimen name="accounts_logo_height">50dp</dimen>
+    <dimen name="accounts_list_margin_horizontal">20dp</dimen>
+    <dimen name="accounts_plus_width">40dp</dimen>
+    <dimen name="accounts_plus_margin">15dp</dimen>
+    <dimen name="accounts_item_margin_horizontal">10dp</dimen>
+
+    <!-- share dialog -->
+    <dimen name="share_select_group_height">300dp</dimen>
+    <dimen name="share_select_user_item_height">20dp</dimen>
+    <dimen name="share_select_user_another_height">50dp</dimen>
+    <dimen name="share_download_expiration_margin_horizontal">65dp</dimen>
+
+    <!--top menu of library-->
+    <dimen name="top_menu_button_width">30dp</dimen>
+    <dimen name="top_menu_button_radius">15dp</dimen>
+    <dimen name="top_menu_button_margin1">@dimen/margin_small</dimen>
+    <dimen name="top_menu_button_margin2">8dp</dimen>
+
+    <!--text size-->
+    <dimen name="topic_txt_size">19sp</dimen>
+    <dimen name="subtopic_txt_size">17sp</dimen>
+    <dimen name="title_txt_size">15sp</dimen>
+    <dimen name="subtitle_txt_size">13sp</dimen>
+    <dimen name="info_txt_size">11sp</dimen>
+    <dimen name="subinfo_txt_size">10sp</dimen>
+
+    <!--gallery dialog-->
+    <dimen name="gallery_margin_horizontal">20dp</dimen>
+
+    <!--bottom button group-->
+    <dimen name="bottom_bar_piece_height">0dp</dimen>
+    <dimen name="bottom_bar_side_button_height">58dp</dimen>
+    <dimen name="bottom_bar_side_icon_width">33dp</dimen>
+    <dimen name="bottom_bar_side_text_margin_top">5dp</dimen>
+    <dimen name="bottom_bar_side_text_size">11sp</dimen>
+    <dimen name="bottom_bar_center_container_width">62dp</dimen>
+    <dimen name="bottom_bar_center_container_radius">31dp</dimen>
+    <dimen name="bottom_bar_center_button_width">60dp</dimen>
+    <dimen name="bottom_bar_center_button_radius">30dp</dimen>
+    <dimen name="bottom_bar_center_button_height">64dp</dimen>
+    <dimen name="bottom_bar_center_icon_height">33dp</dimen>
+    <dimen name="bottom_bar_center_text_margin_top">5dp</dimen>
+    <dimen name="bottom_bar_plus_icon_width">24dp</dimen>
+    <dimen name="bottom_bar_plus_icon_radius">11dp</dimen>
+
+    <!-- Content -->
+    <dimen name="repo_item_icon_width">36dp</dimen>
+    <dimen name="repo_item_icon_minimal_width">18dp</dimen>
+    <dimen name="repo_item_icon_width2">33dp</dimen>
+    <dimen name="repo_item_icon_minimal_width2">17dp</dimen>
+    <dimen name="repo_item_group_width">57dp</dimen>
+    <dimen name="repo_item_group_height">45dp</dimen>
+    <dimen name="repo_item_group_minimal_width">29dp</dimen>
+    <dimen name="repo_item_group_minimal_height">23dp</dimen>
+    <dimen name="repo_item_more_card_width">36dp</dimen>
+    <dimen name="repo_item_more_card_radius">18dp</dimen>
+    <dimen name="repo_item_more_card_minimal_width">36dp</dimen>
+    <dimen name="repo_item_more_card_minimal_radius">18dp</dimen>
+</resources>

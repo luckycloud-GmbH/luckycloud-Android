@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_normal"
+    android:layout_marginHorizontal="@dimen/margin_normal"
+    android:background="@drawable/msg_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dialog_msg_background_radius"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:paddingHorizontal="2dp"
+            android:paddingTop="2dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/share_edit_text_height"
+                android:paddingTop="@dimen/margin_normal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/luckycloud_green"
+                    android:text="Title"
+                    android:lines="1"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/name_hint"
+                    android:lines="1"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/close_card"
+                android:layout_width="@dimen/share_edit_text_height"
+                android:layout_height="@dimen/share_edit_text_height"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_gravity="top"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="@dimen/share_edit_text_radius"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/toolbar_action_mode_button_margin"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/dots_type_grey"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_layout"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/what_want_text"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:text="@string/what_want"
+                android:gravity="center"/>
+
+            <include
+                android:id="@+id/back_layout"
+                layout="@layout/share_back"/>
+
+            <LinearLayout
+                android:id="@+id/selection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding_big"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/external_share_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/share_home_card_margin_top"
+                    android:orientation="vertical"
+                    android:background="@drawable/shadow_share_background">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/external_share_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/share_home_card_height"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/share_home_card_padding_horizontal"
+                            android:layout_marginVertical="@dimen/share_home_card_padding_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/share_home_card_image_height"
+                                android:layout_height="@dimen/share_home_card_image_height"
+                                android:src="@drawable/ic_external"
+                                app:tint="@color/luckycloud_green"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="@dimen/share_home_text_margin"
+                                android:text="@string/external_share"
+                                android:textSize="@dimen/share_home_card_text_size"
+                                android:fontFamily="@font/euclidsquare_semibold"/>
+
+                            <ImageView
+                                android:layout_width="@dimen/share_direction_width"
+                                android:layout_height="@dimen/share_direction_width"
+                                android:src="@drawable/ic_right"
+                                app:tint="@color/luckycloud_green" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/share_home_card_margin_top"
+                    android:orientation="vertical"
+                    android:background="@drawable/shadow_share_background">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/internal_share_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/share_home_card_height"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/share_home_card_padding_horizontal"
+                            android:layout_marginVertical="@dimen/share_home_card_padding_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/share_home_card_image_height"
+                                android:layout_height="@dimen/share_home_card_image_height"
+                                android:src="@drawable/ic_internal"
+                                app:tint="@color/luckycloud_green"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="@dimen/share_home_text_margin"
+                                android:text="@string/internal_share"
+                                android:textSize="@dimen/share_home_card_text_size"
+                                android:fontFamily="@font/euclidsquare_semibold"/>
+
+                            <ImageView
+                                android:layout_width="@dimen/share_direction_width"
+                                android:layout_height="@dimen/share_direction_width"
+                                android:src="@drawable/ic_right"
+                                app:tint="@color/luckycloud_green" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:paddingHorizontal="@dimen/padding_big"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/download_link_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/share_home_card_margin_top"
+                        android:orientation="vertical"
+                        android:background="@drawable/shadow_share_background">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/download_link_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/share_home_card_height"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="@dimen/share_home_card_padding_horizontal"
+                                android:layout_marginVertical="@dimen/share_home_card_padding_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/share_home_card_image_height"
+                                    android:layout_height="@dimen/share_home_card_image_height"
+                                    android:src="@drawable/ic_download"
+                                    app:tint="@color/luckycloud_green"/>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="@dimen/share_home_text_margin"
+                                    android:text="@string/download_link"
+                                    android:textSize="@dimen/share_home_card_text_size"
+                                    android:fontFamily="@font/euclidsquare_semibold"/>
+
+                                <ImageView
+                                    android:id="@+id/download_link_direction_image"
+                                    android:layout_width="@dimen/share_direction_width"
+                                    android:layout_height="@dimen/share_direction_width"
+                                    android:src="@drawable/ic_right"
+                                    app:tint="@color/luckycloud_green" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <FrameLayout
+                            android:id="@+id/download_link_frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/upload_link_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/share_home_card_margin_top"
+                        android:orientation="vertical"
+                        android:background="@drawable/shadow_share_background">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/upload_link_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/share_home_card_height"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/share_home_card_padding_horizontal"
+                                android:layout_marginVertical="@dimen/share_home_card_padding_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/share_home_card_image_height"
+                                    android:layout_height="@dimen/share_home_card_image_height"
+                                    android:src="@drawable/ic_upload"
+                                    app:tint="@color/luckycloud_green"/>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="@dimen/share_home_text_margin"
+                                    android:text="@string/upload_link"
+                                    android:textSize="@dimen/share_home_card_text_size"
+                                    android:fontFamily="@font/euclidsquare_semibold"/>
+
+                                <ImageView
+                                    android:id="@+id/upload_link_direction_image"
+                                    android:layout_width="@dimen/share_direction_width"
+                                    android:layout_height="@dimen/share_direction_width"
+                                    android:src="@drawable/ic_right"
+                                    app:tint="@color/luckycloud_green" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <FrameLayout
+                            android:id="@+id/upload_link_frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/share_user_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/share_home_card_margin_top"
+                        android:orientation="vertical"
+                        android:background="@drawable/shadow_share_background">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/share_user_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/share_home_card_height"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="@dimen/share_home_card_padding_horizontal"
+                                android:layout_marginVertical="@dimen/share_home_card_padding_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/share_home_card_image_height"
+                                    android:layout_height="@dimen/share_home_card_image_height"
+                                    android:src="@drawable/ic_user"
+                                    app:tint="@color/luckycloud_green"/>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="@dimen/share_home_text_margin"
+                                    android:text="@string/share_user"
+                                    android:textSize="@dimen/share_home_card_text_size"
+                                    android:fontFamily="@font/euclidsquare_semibold"/>
+
+                                <ImageView
+                                    android:id="@+id/share_user_direction_image"
+                                    android:layout_width="@dimen/share_direction_width"
+                                    android:layout_height="@dimen/share_direction_width"
+                                    android:src="@drawable/ic_right"
+                                    app:tint="@color/luckycloud_green" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <FrameLayout
+                            android:id="@+id/share_user_frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/share_group_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/share_home_card_margin_top"
+                        android:orientation="vertical"
+                        android:background="@drawable/shadow_share_background">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/share_group_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/share_home_card_height"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="@dimen/share_home_card_padding_horizontal"
+                                android:layout_marginVertical="@dimen/share_home_card_padding_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/share_home_card_image_height"
+                                    android:layout_height="@dimen/share_home_card_image_height"
+                                    android:src="@drawable/ic_share_group"
+                                    app:tint="@color/luckycloud_green"/>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="@dimen/share_home_text_margin"
+                                    android:text="@string/share_group"
+                                    android:textSize="@dimen/share_home_card_text_size"
+                                    android:fontFamily="@font/euclidsquare_semibold"/>
+
+                                <ImageView
+                                    android:id="@+id/share_group_direction_image"
+                                    android:layout_width="@dimen/share_direction_width"
+                                    android:layout_height="@dimen/share_direction_width"
+                                    android:src="@drawable/ic_right"
+                                    app:tint="@color/luckycloud_green" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <FrameLayout
+                            android:id="@+id/share_group_frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/internal_link_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/share_home_card_margin_top"
+                        android:orientation="vertical"
+                        android:background="@drawable/shadow_share_background">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/internal_link_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/share_home_card_height"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="@dimen/share_home_card_padding_horizontal"
+                                android:layout_marginVertical="@dimen/share_home_card_padding_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/share_home_card_image_height"
+                                    android:layout_height="@dimen/share_home_card_image_height"
+                                    android:src="@drawable/ic_internal"
+                                    app:tint="@color/luckycloud_green"/>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="@dimen/share_home_text_margin"
+                                    android:text="@string/internal_link"
+                                    android:textSize="@dimen/share_home_card_text_size"
+                                    android:fontFamily="@font/euclidsquare_semibold"/>
+
+                                <ImageView
+                                    android:id="@+id/internal_link_direction_image"
+                                    android:layout_width="@dimen/share_direction_width"
+                                    android:layout_height="@dimen/share_direction_width"
+                                    android:src="@drawable/ic_right"
+                                    app:tint="@color/luckycloud_green" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <FrameLayout
+                            android:id="@+id/internal_link_frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/custom_sharing_permission_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/share_home_card_margin_top"
+                        android:orientation="vertical"
+                        android:background="@drawable/shadow_share_background">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/custom_sharing_permission_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/share_home_card_height"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="@dimen/share_home_card_padding_horizontal"
+                                android:layout_marginVertical="@dimen/share_home_card_padding_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/share_home_card_image_height"
+                                    android:layout_height="@dimen/share_home_card_image_height"
+                                    android:src="@drawable/ic_permission"
+                                    app:tint="@color/luckycloud_green"/>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="@dimen/share_home_text_margin"
+                                    android:text="@string/custom_permission"
+                                    android:textSize="@dimen/share_home_card_text_size"
+                                    android:fontFamily="@font/euclidsquare_semibold"/>
+
+                                <ImageView
+                                    android:id="@+id/custom_sharing_permission_direction_image"
+                                    android:layout_width="@dimen/share_direction_width"
+                                    android:layout_height="@dimen/share_direction_width"
+                                    android:src="@drawable/ic_right"
+                                    app:tint="@color/luckycloud_green" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <FrameLayout
+                            android:id="@+id/custom_sharing_permission_frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/custom_sharing_permission_frame2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header_layout"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/progress_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/toolbar_bottom_line"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:visibility="invisible">
+
+        <ProgressBar
+            style="@style/loading"
+            android:layout_width="@dimen/normal_progress_logo_width"
+            android:layout_height="@dimen/normal_progress_logo_width"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

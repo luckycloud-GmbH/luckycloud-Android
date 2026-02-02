@@ -1,0 +1,57 @@
+<RelativeLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/cuc_remote_library_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/tv_title_margin_top"
+        android:text="@string/settings_cuc_remote_lib_title"
+        android:textColor="@color/luckycloud_green"
+        android:textSize="@dimen/title_txt_size"
+        android:fontFamily="@font/euclidsquare_medium"/>
+
+    <RelativeLayout
+        android:id="@+id/cuc_remote_library_list_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/section_margin_top"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/cuc_remote_library_card"
+        android:layout_below="@+id/cuc_remote_library_title_tv">
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cuc_remote_library_card"
+        android:layout_width="@dimen/cuc_button_width"
+        android:layout_height="@dimen/cuc_button_height"
+        android:layout_marginVertical="@dimen/margin_big"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/luckycloud_green"
+        app:cardCornerRadius="@dimen/cuc_button_radius"
+        app:cardElevation="0dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/confirm_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="@drawable/rounded_transfer_button_on"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/info_txt_size" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="?actionBarSize"
+    android:layout_marginBottom="@dimen/margin_normal"
+    android:background="@drawable/msg_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/padding_big"
+        android:paddingHorizontal="@dimen/padding_big"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/close_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/share_edit_text_height"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_tag"
+                    android:textAlignment="center"
+                    android:textColor="@color/luckycloud_green"
+                    android:textSize="@dimen/subtitle_txt_size" />
+
+                <TextView
+                    android:id="@+id/title_repo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/create"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_view_secondary_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/close_card"
+                android:layout_width="@dimen/share_edit_text_height"
+                android:layout_height="@dimen/share_edit_text_height"
+                android:layout_gravity="top"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="@dimen/share_edit_text_radius"
+                app:cardElevation="0dp"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/toolbar_action_mode_button_margin"
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/dots_type_grey" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/create_tag_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/share_edit_text_height"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_below="@+id/close_layout"
+            android:background="@drawable/rounded_edittext_share"
+            android:ems="10"
+            android:fontFamily="@font/euclidsquare_medium"
+            android:hint="@string/name_hint"
+            android:importantForAutofill="auto"
+            android:inputType="text"
+            android:paddingStart="@dimen/share_edit_text_radius"
+            android:paddingEnd="@dimen/share_edit_text_radius"
+            android:textColor="@color/text_view_color"
+            android:textSize="@dimen/info_txt_size"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/new_repo_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_below="@+id/create_tag_name"
+            android:hint="@string/select_color"
+            android:inputType="text"
+            android:textSize="@dimen/info_txt_size" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/color_recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_below="@+id/new_repo_name"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/error_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/color_recycler"
+            android:inputType="text"
+            android:textColor="@color/red"
+            android:textSize="@dimen/dialog_error_txt_size"
+            android:gravity="center"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/error_text"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cancel_card"
+                android:layout_width="@dimen/cuc_button_width"
+                android:layout_height="@dimen/cuc_button_height"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/luckycloud_green"
+                app:cardCornerRadius="@dimen/cuc_button_radius"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/cancel_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_cuc_button_off"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/luckycloud_green"
+                    android:textSize="@dimen/info_txt_size" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/create_card"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/share_edit_text_height"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/luckycloud_green"
+                app:cardCornerRadius="@dimen/share_edit_text_radius"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_transfer_button_on"
+                    android:gravity="center"
+                    android:text="@string/create"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/info_txt_size" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/progress_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/toolbar_bottom_line"
+        app:cardCornerRadius="@dimen/dialog_msg_background_radius"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/relative_layout"
+        app:layout_constraintEnd_toEndOf="@+id/relative_layout"
+        app:layout_constraintStart_toStartOf="@+id/relative_layout"
+        app:layout_constraintTop_toTopOf="@+id/relative_layout"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@style/loading"
+            android:layout_width="@dimen/normal_progress_logo_width"
+            android:layout_height="@dimen/normal_progress_logo_width"
+            android:layout_gravity="center" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

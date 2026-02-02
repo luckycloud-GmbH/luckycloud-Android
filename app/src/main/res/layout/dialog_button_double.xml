@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/double_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="2dp"
+    android:background="@drawable/rounded_dialog_bottom2"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/rounded_dialog_bottom_left"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cancel_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/dialog_msg_background"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/dialog_msg_background_radius"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/cancel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dialog_msg_background_radius"
+                android:layout_marginVertical="@dimen/dialog_msg_card_margin"
+                android:layout_gravity="center"
+                android:text="@string/cancel"
+                android:textSize="@dimen/title_txt_size"
+                android:textColor="@color/luckycloud_green"
+                android:fontFamily="@font/euclidsquare_regular"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="1dp"
+        android:background="@drawable/rounded_dialog_bottom_right"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ok_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/dialog_msg_background"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/dialog_msg_background_radius"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/ok_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dialog_msg_background_radius"
+                android:layout_marginVertical="@dimen/dialog_msg_card_margin"
+                android:layout_gravity="center"
+                android:text="@string/ok"
+                android:textSize="@dimen/title_txt_size"
+                android:textColor="@color/luckycloud_green"
+                android:fontFamily="@font/euclidsquare_regular"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

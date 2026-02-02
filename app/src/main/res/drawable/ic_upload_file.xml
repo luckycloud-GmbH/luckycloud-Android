@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24.498dp"
+    android:height="29.582dp"
+    android:viewportWidth="24.498"
+    android:viewportHeight="29.582">
+  <path
+      android:pathData="M14.795,8.117A1.116,1.116 0,0 1,13.682 6.999L13.682,-0.001L2.783,-0.001A2.791,2.791 0,0 0,0 2.783L0,25.039a2.791,2.791 0,0 0,2.783 2.783L19.016,27.822A2.791,2.791 0,0 0,21.8 25.039L21.8,8.117Z"
+      android:fillColor="@color/luckycloud_green"/>
+  <path
+      android:pathData="M14.715,8.109h7.083L13.689,0L13.689,7.082a1.11,1.11 0,0 0,1.026 1.028"
+      android:fillColor="#e6e6e6"/>
+  <path
+      android:pathData="M21.798,13.885L21.798,8.149L14.769,8.149Z"
+      android:fillColor="@color/luckycloud_green_darker"/>
+  <path
+      android:pathData="M16.551,28.832C12.582,28.832 9.353,25.603 9.353,21.635C9.353,17.666 12.582,14.437 16.551,14.437C20.519,14.437 23.748,17.666 23.748,21.635C23.748,23.431 23.102,25.104 21.88,26.473C20.541,27.972 18.599,28.832 16.551,28.832Z"
+      android:strokeAlpha="0.996"
+      android:fillColor="#fff"
+      android:strokeColor="#00000000"
+      android:fillAlpha="0.996"/>
+  <path
+      android:pathData="M16.551,15.187C12.995,15.187 10.103,18.079 10.103,21.635C10.103,25.19 12.995,28.082 16.551,28.082C18.385,28.082 20.124,27.313 21.32,25.973C22.418,24.744 22.998,23.244 22.998,21.635C22.998,18.079 20.106,15.187 16.551,15.187M16.551,13.687C20.94,13.687 24.498,17.245 24.498,21.635C24.498,23.667 23.735,25.521 22.439,26.972C21.025,28.556 18.908,29.582 16.551,29.582C12.161,29.582 8.603,26.024 8.603,21.635C8.603,17.245 12.161,13.687 16.551,13.687Z"
+      android:strokeAlpha="0.996"
+      android:fillColor="@color/luckycloud_green"
+      android:strokeColor="#00000000"
+      android:fillAlpha="0.996"/>
+  <path
+      android:pathData="M16.629,18.335v8.032"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/luckycloud_green"/>
+  <path
+      android:pathData="M13.841,21.044 L16.55,18.335 19.26,21.044"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/luckycloud_green"/>
+</vector>

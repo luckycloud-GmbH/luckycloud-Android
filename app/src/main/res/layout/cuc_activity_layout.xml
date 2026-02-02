@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="40dp"
+    android:orientation="vertical"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/logo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_cuc_top_background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_luckycloud_wortbildmarke_horizontal" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/close_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_close" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/logo_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/rounded_cuc_bottom_background"
+        android:orientation="vertical">
+
+        <com.seafile.seadroid2.cameraupload.NonSwipeableViewPager
+            android:id="@+id/cuc_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/card_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="20dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/back_card"
+                android:layout_width="@dimen/cuc_button_width"
+                android:layout_height="@dimen/cuc_button_height"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/luckycloud_green"
+                app:cardCornerRadius="@dimen/cuc_button_radius"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/back_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_cuc_button_off"
+                    android:gravity="center"
+                    android:text="@string/back_button_label"
+                    android:textColor="@color/luckycloud_green"
+                    android:textSize="@dimen/info_txt_size" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/continue_card"
+                android:layout_width="@dimen/cuc_button_width"
+                android:layout_height="@dimen/cuc_button_height"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/luckycloud_green"
+                app:cardCornerRadius="@dimen/cuc_button_radius"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/continue_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_transfer_button_on"
+                    android:gravity="center"
+                    android:text="@string/continue_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/info_txt_size" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/confirm_card"
+                android:layout_width="@dimen/cuc_button_width"
+                android:layout_height="@dimen/cuc_button_height"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/luckycloud_green"
+                app:cardCornerRadius="@dimen/cuc_button_radius"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/confirm_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_transfer_button_on"
+                    android:gravity="center"
+                    android:text="@string/confirm"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/info_txt_size" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/cuc_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            app:dotsColor="@color/luckycloud_green"
+            app:dotsCornerRadius="3dp"
+            app:dotsSize="6dp"
+            app:dotsSpacing="8dp"
+            app:dotsWidthFactor="2.5"
+            app:selectedDotColor="@color/luckycloud_green"
+            app:progressMode="true" />
+    </LinearLayout>
+</RelativeLayout>

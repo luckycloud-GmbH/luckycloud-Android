@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/msg_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_marginHorizontal="@dimen/margin_big"
+            android:text="@string/upload_file_exist"
+            android:textSize="@dimen/subtopic_txt_size"
+            android:textColor="@color/luckycloud_green"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/message1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginHorizontal="@dimen/margin_big"
+            android:layout_marginBottom="4dp"
+            android:textSize="@dimen/title_txt_size"
+            android:lineSpacingExtra="2dp"/>
+
+        <TextView
+            android:id="@+id/message2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginHorizontal="@dimen/margin_big"
+            android:textSize="@dimen/title_txt_size"
+            android:lineSpacingExtra="2dp"/>
+
+        <include
+            layout="@layout/dialog_button_triple"/>
+    </LinearLayout>
+</RelativeLayout>
